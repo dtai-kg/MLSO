@@ -1,0 +1,290 @@
+@prefix : <http://w3id.org/mlso/vocab/ml_field/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/ml_field> .
+
+<http://w3id.org/mlso/vocab/ml_field> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/ml_field/AdaptiveWebSites
+:AdaptiveWebSites rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "Adaptive websites in the context of machine learning refer to web platforms that dynamically adjust their content, layout, and functionality based on user behavior, preferences, or contextual factors. Machine learning algorithms analyze user interactions, past behavior, and other relevant data to personalize the user experience, providing tailored content and recommendations. These systems continuously learn from user feedback and adapt in real-time to enhance user engagement, satisfaction, and overall website performance. Adaptive websites exemplify the application of machine learning to create more responsive and user-centric online experiences." ;
+                  skos:prefLabel "Adaptive Websites" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/AffectiveComputing
+:AffectiveComputing rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "Affective computing is a subfield of machine learning that focuses on enabling computers to recognize, interpret, and respond to human emotions. Using a combination of facial expression analysis, speech recognition, physiological signals, and other behavioral cues, affective computing systems aim to understand the emotional state of individuals. This technology finds applications in various domains, such as human-computer interaction, customer experience enhancement, and mental health support. By incorporating emotional intelligence into computing systems, affective computing strives to create more empathetic and responsive interactions between machines and humans." ;
+                    skos:prefLabel "Affective Computing" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/Bioinformatics
+:Bioinformatics rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Bioinformatics is an interdisciplinary field of science that develops methods and software tools for understanding biological data, especially when the data sets are large and complex. Bioinformatics uses biology, chemistry, physics, computer science, computer programming, information engineering, mathematics and statistics to analyze and interpret biological data. The subsequent process of analyzing and interpreting data is referred to as computational biology." ;
+                skos:prefLabel "Bioinformatics" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/BrainMachineInterfaces
+:BrainMachineInterfaces rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:definition "Brain-Machine Interfaces (BMIs) are a specialized field within machine learning that involves establishing a direct communication pathway between the human brain and external devices, typically computers or robotic systems. Using advanced signal processing and machine learning algorithms, BMIs interpret neural activity, such as brain signals or electrical impulses, to enable users to control external devices with their thoughts. This technology holds promise for applications in assistive technology, neuroprosthetics, and even enhancing cognitive abilities. By bridging the gap between the human brain and machines, BMIs offer potential solutions for individuals with motor disabilities and open up new possibilities for human-machine interaction." ;
+                        skos:prefLabel "Brain-Machine Interfaces" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/Cheminformatics
+:Cheminformatics rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Cheminformatics is a branch of machine learning that focuses on the application of computational methods and techniques to analyze and manage chemical data. In this field, machine learning algorithms are employed to extract meaningful insights from large datasets related to chemical compounds, their properties, and biological activities. Cheminformatics plays a crucial role in drug discovery, materials science, and other areas of chemistry by assisting researchers in predicting chemical behavior, identifying potential drug candidates, and optimizing molecular structures. By leveraging machine learning models, cheminformatics accelerates the process of data-driven decision-making in the chemical and pharmaceutical industries, contributing to advancements in research and development." ;
+                 skos:prefLabel "Cheminformatics" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/ClassifyingDNAsequences
+:ClassifyingDNAsequences rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:definition "DNA sequences classification is a branch of machine learning that focuses on developing algorithms and models to categorize and interpret DNA sequences based on various biological factors. This field plays a crucial role in genomics, helping researchers identify and understand genetic variations, predict functional elements in the genome, and classify sequences associated with specific traits or diseases. Machine learning techniques, such as deep learning and sequence analysis algorithms, are applied to analyze the vast amount of genomic data generated through techniques like DNA sequencing. By automating the classification of DNA sequences, this field accelerates genomic research, personalized medicine, and the discovery of genetic markers for various biological phenomena, contributing to advancements in the understanding of genetics and potential medical applications." ;
+                         skos:prefLabel "DNA Sequences Classification" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/ComputationalAdversiting
+:ComputationalAdversiting rdf:type owl:NamedIndividual ,
+                                   skos:Concept ;
+                          skos:definition "Computational advertising refers to the application of machine learning algorithms and computational techniques to optimize and personalize the delivery of online advertisements. This field involves analyzing vast amounts of user data, including browsing history, preferences, and behavior, to tailor advertisements to individual users or target audiences. Through real-time bidding, predictive modeling, and other machine learning approaches, computational advertising aims to maximize the relevance and effectiveness of ads, ultimately improving the return on investment for advertisers. This dynamic and data-driven approach enhances the efficiency of digital advertising campaigns, ensuring that users are presented with content that aligns with their interests and behaviors." ;
+                          skos:prefLabel "Computational Adversiting" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/ComputationalFinance
+:ComputationalFinance rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:definition "Computational finance as a discipline emerged in the 1980s. It is also sometimes referred to as \"financial engineering,\" \"financial mathematics,\" \"mathematical finance,\" or \"quantitative finance.\" It uses the tools of mathematics, statistics, and computing to solve problems in finance. Computational methods and the mathematics behind them have become an indispensable part of the finance industry." ;
+                      skos:prefLabel "Computational Finance" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/ComputerVision
+:ComputerVision rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs — and take actions or make recommendations based on that information. If AI enables computers to think, computer vision enables them to see, observe and understand." ;
+                skos:prefLabel "Computer Vision" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/FactPrediction
+:FactPrediction rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Fact prediction in machine learning refers to the task of forecasting or estimating the likelihood of certain events or outcomes based on historical data, patterns, and relevant features. This involves the development of predictive models that can analyze past instances and learn patterns to make informed predictions about future occurrences. Fact prediction is applied across various domains, including finance, healthcare, and sports, where machine learning algorithms can be trained to anticipate events such as stock market movements, disease diagnoses, or sports match outcomes. The accuracy and reliability of fact prediction models depend on the quality and diversity of the training data, as well as the sophistication of the chosen machine learning techniques employed for the task." ;
+                skos:prefLabel "Fact Prediction" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/FraudDetection
+:FraudDetection rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Fraud detection in the realm of machine learning involves the use of algorithms and analytical models to identify patterns or anomalies that may indicate fraudulent activities within a system or dataset. By leveraging historical transaction data and relevant features, machine learning algorithms can learn to distinguish between legitimate and fraudulent behavior. These models can be applied in various domains, including finance, e-commerce, and cybersecurity, to automatically detect and prevent fraudulent transactions, activities, or access attempts. The continuous learning capability of machine learning systems allows them to adapt to evolving fraud patterns, enhancing their effectiveness in providing real-time and proactive detection measures to mitigate financial losses and protect systems from unauthorized or malicious activities." ;
+                skos:prefLabel "Fraud Detection" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/GamePlaying
+:GamePlaying rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:definition "Game playing in the context of machine learning refers to the development and application of algorithms that can play and strategize in various games." ;
+             skos:prefLabel "Game Playing" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/InformationRetrieval
+:InformationRetrieval rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:definition "Information retrieval in machine learning involves the development of algorithms and systems to efficiently search and extract relevant information from large datasets or repositories. This field focuses on creating methods that can retrieve documents, data, or multimedia content based on user queries or search criteria. Machine learning techniques are often applied to improve the accuracy and relevance of search results by learning from user interactions and feedback." ;
+                      skos:prefLabel "Information Retrieval" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/LinkDiscovery
+:LinkDiscovery rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:definition "Link discovery in machine learning involves the identification and analysis of relationships, connections, or links between entities in large datasets. This field aims to uncover meaningful associations between data points, which may exist in various forms such as hyperlinks between web pages, connections in social networks, or relationships in knowledge graphs. Machine learning algorithms are employed to automatically discover and characterize these links, providing valuable insights into the structure and patterns within complex networks." ;
+               skos:prefLabel "Link Discovery" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/MachineLearningField
+:MachineLearningField rdf:type owl:NamedIndividual ,
+                               skos:Collection ;
+                      skos:member :AdaptiveWebSites ,
+                                  :AffectiveComputing ,
+                                  :Bioinformatics ,
+                                  :BrainMachineInterfaces ,
+                                  :Cheminformatics ,
+                                  :ClassifyingDNAsequences ,
+                                  :ComputationalAdversiting ,
+                                  :ComputationalFinance ,
+                                  :ComputerVision ,
+                                  :FactPrediction ,
+                                  :FraudDetection ,
+                                  :GamePlaying ,
+                                  :InformationRetrieval ,
+                                  :LinkDiscovery ,
+                                  :MachinePerception ,
+                                  :MedicalDiagnosis ,
+                                  :Metaheuristics ,
+                                  :NaturalLanguageProcessing ,
+                                  :ObjectDetection ,
+                                  :Optimization ,
+                                  :RecomenderSystems ,
+                                  :Robotics ,
+                                  :SearchEngines ,
+                                  :SentimentAnalysis ,
+                                  :SequenceMining ,
+                                  :SoftwareEngineering ,
+                                  :SpeechAndHandwritingRecognition ,
+                                  :StockMarketAnalysis ,
+                                  :StructuralHealthMonitoring ,
+                                  :SyntacticLanguageProcessing ;
+                      skos:prefLabel "Machine Learning Field" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/MachinePerception
+:MachinePerception rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "Machine perception refers to the ability of machines, particularly computers, to interpret and understand information from the external world, typically through sensors and input data. This interdisciplinary field encompasses various aspects of sensory data processing, such as computer vision, speech recognition, and natural language processing. Machine perception involves the development of algorithms and models that enable machines to analyze and interpret visual, auditory, or textual information, mimicking human-like perceptual capabilities." ;
+                   skos:prefLabel "Machine Perception" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/MedicalDiagnosis
+:MedicalDiagnosis rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "Medical diagnosis in the context of machine learning involves the application of algorithms and computational models to analyze medical data and assist healthcare professionals in identifying diseases or medical conditions. These models utilize various types of medical data, including patient records, imaging studies, laboratory results, and genetic information, to make predictions or classifications." ;
+                  skos:prefLabel "Medical Diagnosis" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/Metaheuristics
+:Metaheuristics rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Metaheuristics refer to high-level strategies or general methodologies designed to guide the search process for finding approximate solutions to optimization and combinatorial problems. These algorithms are particularly useful when dealing with complex problems for which traditional optimization methods may be impractical or computationally expensive. Metaheuristics provide a framework for exploring and exploiting the solution space efficiently." ;
+                skos:prefLabel "Metaheuristics" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/NaturalLanguageProcessing
+:NaturalLanguageProcessing rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:definition "Natural Language Processing (NLP) is a subfield of artificial intelligence and machine learning that focuses on the interaction between computers and human language. The goal of NLP is to enable computers to understand, interpret, and generate human language in a way that is both meaningful and contextually relevant. This interdisciplinary field combines techniques from linguistics, computer science, and statistics to develop algorithms and models that can process and analyze large amounts of natural language data." ;
+                           skos:prefLabel "Natural Language Processing" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/ObjectDetection
+:ObjectDetection rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Object detection is a computer vision task within the field of machine learning that involves identifying and locating objects within images or videos. The goal is to recognize and draw bounding boxes around specific objects of interest in a given visual scene. This task is fundamental to various applications, including autonomous vehicles, surveillance systems, robotics, and image analysis." ;
+                 skos:prefLabel "Object Detection" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/Optimization
+:Optimization rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:definition "Optimization, in the context of machine learning and mathematics, refers to the process of finding the best possible solution to a problem among a set of feasible alternatives. This involves maximizing or minimizing an objective function, subject to certain constraints. Optimization problems are pervasive in various fields, including machine learning, engineering, economics, and operations research." ;
+              skos:prefLabel "Optimization" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/RecomenderSystems
+:RecomenderSystems rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "Recommender systems, also known as recommendation systems or engines, are applications of machine learning and data analysis that provide personalized suggestions to users. The primary goal of recommender systems is to predict and recommend items that users are likely to be interested in, based on their preferences, behavior, and historical interactions with the system." ;
+                   skos:prefLabel "Recomender Systems" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/Robotics
+:Robotics rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "Robotics is an interdisciplinary field that involves the design, construction, operation, and use of robots. Robots are programmable machines equipped with sensors, actuators, and a control system, allowing them to perform tasks autonomously or semi-autonomously. The field of robotics combines aspects of mechanical engineering, electrical engineering, computer science, and artificial intelligence." ;
+          skos:prefLabel "Robotics" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SearchEngines
+:SearchEngines rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:definition "Search engines are sophisticated software systems designed to retrieve information from the vast expanse of the World Wide Web and present relevant results to users based on their queries. These systems play a crucial role in information retrieval and are fundamental to the functioning of the internet. The process involves crawling and indexing web pages, followed by ranking and presenting the most relevant results to users." ;
+               skos:prefLabel "Search Engines" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SentimentAnalysis
+:SentimentAnalysis rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "Sentiment analysis, also known as opinion mining, is a natural language processing (NLP) technique that involves determining and extracting the sentiment or emotional tone expressed in a piece of text. The goal is to understand the subjective information conveyed by the text and classify it as positive, negative, or neutral." ;
+                   skos:prefLabel "Sentiment Analysis" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SequenceMining
+:SequenceMining rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Sequence mining is a data mining technique that involves the discovery of interesting patterns or sequences within sequential data. This type of data typically represents a temporal or sequential order, where items follow one another. Sequence mining is used to identify recurring patterns, trends, or associations within these sequences." ;
+                skos:prefLabel "Sequence Mining" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SoftwareEngineering
+:SoftwareEngineering rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "Software engineering is a discipline that involves the systematic design, development, testing, maintenance, and documentation of software applications and systems. It encompasses a structured and organized approach to software development, aiming to produce high-quality, reliable, and scalable software solutions." ;
+                     skos:prefLabel "Software Engineering" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SpeechAndHandwritingRecognition
+:SpeechAndHandwritingRecognition rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:definition "Speech recognition, also known as automatic speech recognition (ASR), is the technology that converts spoken language into written text. This involves analyzing audio signals to identify and interpret the spoken words. Machine learning techniques, particularly deep learning algorithms like recurrent neural networks (RNNs) and convolutional neural networks (CNNs), are commonly employed for speech recognition tasks. Applications range from voice-controlled virtual assistants and transcription services to voice-activated systems in cars and smartphones. Handwriting recognition, also called optical character recognition (OCR) or handwriting detection, is the process of converting handwritten text or characters into digital text. This technology involves analyzing images or scans of handwritten documents to identify and interpret the text content. Handwriting recognition can be particularly useful in digitizing historical documents, automating form processing, and aiding data entry. Machine learning algorithms, including convolutional neural networks (CNNs) and support vector machines (SVMs), are often applied in this context." ;
+                                 skos:prefLabel "Speech and Handwriting Recognition" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/StockMarketAnalysis
+:StockMarketAnalysis rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "Stock market analysis involves the examination and interpretation of financial data related to publicly traded companies and the broader financial markets. Investors and analysts perform stock market analysis to make informed decisions about buying, selling, or holding financial instruments, such as stocks and other securities." ;
+                     skos:prefLabel "Stock Market Analysis" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/StructuralHealthMonitoring
+:StructuralHealthMonitoring rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:definition "Structural Health Monitoring (SHM) is an interdisciplinary field focused on using sensors and analytical methods to evaluate the condition of structures. By strategically placing sensors like accelerometers and strain gauges, SHM systems collect real-time data on parameters such as structural deformation and temperature. This data is then analyzed to detect anomalies or signs of damage, aiding in the identification and diagnosis of structural issues. SHM finds applications in civil infrastructure, aerospace, and energy sectors, providing a proactive approach to ensure structural integrity, enhance safety, and optimize maintenance efforts." ;
+                            skos:prefLabel "Structural Health Monitoring" .
+
+
+###  http://w3id.org/mlso/vocab/ml_field/SyntacticLanguageProcessing
+:SyntacticLanguageProcessing rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:definition "Syntactic Language Processing refers to the computational analysis of the structure and arrangement of words within a sentence to understand the grammatical relationships and roles each word plays. In this field, algorithms and models are employed to parse and analyze the syntactic structure of natural language, identifying components such as nouns, verbs, and modifiers, as well as the relationships between them. Syntactic processing is crucial for various natural language processing tasks, including part-of-speech tagging, parsing, and syntactic dependency analysis. By decoding the grammatical structure of language, syntactic language processing contributes to the broader goal of enabling machines to comprehend and generate human-like sentences." ;
+                             skos:prefLabel "Syntactic Language Processing" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

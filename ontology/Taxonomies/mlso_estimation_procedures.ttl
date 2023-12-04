@@ -1,0 +1,89 @@
+@prefix : <http://w3id.org/mlso/vocab/estimation_procedure/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/estimation_procedure> .
+
+<http://w3id.org/mlso/vocab/estimation_procedure> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/EstimationProcedure
+:EstimationProcedure rdf:type owl:NamedIndividual ,
+                              skos:Collection ;
+                     skos:member :crossvalidation ,
+                                 :holdout ,
+                                 :leave_one_out ,
+                                 :test_then_train ;
+                     skos:prefLabel <http://w3id.org/mlso/vocab/estimation_procedure/learning_curve> ,
+                                    "Estimation Procedure" .
+
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/crossvalidation
+:crossvalidation rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Cross-validation is a technique to evaluate predictive models by partitioning the original sample into a training set to train the model, and a test set to evaluate it. In k-fold cross-validation, the original sample is randomly partitioned into k equal size subsamples. Of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k-1 subsamples are used as training data. The cross-validation process is then repeated k times (the folds), with each of the k subsamples used exactly once as the validation data. The k results from the folds can then be averaged (or otherwise combined) to produce a single estimation. The advantage of this method is that all observations are used for both training and validation, and each observation is used for validation exactly once. For classification problems, one typically uses stratified k-fold cross-validation, in which the folds are selected so that each fold contains roughly the same proportions of class labels. In repeated cross-validation, the cross-validation procedure is repeated n times, yielding n random partitions of the original sample. The n results are again  averaged (or otherwise combined) to produce a single estimation.< OpenML generates train-test splits given the number of folds and repeats, so that different users can evaluate their models with the same splits. Stratification is applied by default for classification problems (unless otherwise specified). The splits are given as part of the task description as an ARFF file with the row id, fold number, repeat number and the class (TRAIN or TEST). The uploaded predictions should be labeled with the fold and repeat number of the test instance, so that the results can be properly evaluated and aggregated. OpenML stores both the per fold/repeat results and the aggregated scores." ;
+                 skos:prefLabel "cross-validation" .
+
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/holdout
+:holdout rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:definition "Holdout or random subsampling is a technique to evaluate predictive models by partitioning the original sample into a training set to train the model, and a test set to evaluate it.  In a k% holdout, the original sample is randomly partitioned into a test set containing k% of the input sample size, and a 1-k% training set. Sampling is done without replacement. This holdout is usually repeated n times, yielding n random partitions of the original sample. The n results are averaged (or otherwise combined) to produce a single estimation. For classification problems, one typically uses stratified sampling, so that the test set contains roughly the same proportions of class labels as the original sample. OpenML generates train-test splits given the percentage size of the holdout and the number of repeats, so that different users can evaluate their models with the same splits. Stratification is applied by default for classification problems (unless otherwise specified). The splits are given as part of the task description as an ARFF file with the row id, fold number (0/1), repeat number and the class (TRAIN or TEST). The uploaded predictions should be labeled with the fold and repeat number of the test instance, so that the results can be properly evaluated and aggregated. OpenML stores both the per fold/repeat results and the aggregated scores." ;
+         skos:prefLabel "holdout" .
+
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/leave_one_out
+:leave_one_out rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:definition "Leave-on-out is a special case of cross-validation where the number of folds equals the number of instances. Thus, models are always evaluated on one instance and trained on all others. Leave-one-out is deterministic, bias-free, and does not require repeats or stratification. However, it is very computationally intensive and thus only advised for small data sets. For leave-one-out, OpenML does not provide a train-test split file, but does require that the uploaded predictions are labeled with the row id of the test instance, so that the results can be properly evaluated and aggregated. OpenML stores both the per fold/repeat results and the aggregated scores." ;
+               skos:prefLabel "leave one out" .
+
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/test_then_train
+:test_then_train rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "In the test-then-train approach, the model is tested on a portion of the dataset before being trained on the remaining data. This is the reverse of the typical train-then-test procedure." ;
+                 skos:prefLabel "test then train" .
+
+
+###  http://w3id.org/mlso/vocab/estimation_procedure/learning_curve
+<http://w3id.org/mlso/vocab/estimation_procedure/learning_curve> rdf:type owl:NamedIndividual ,
+                                                                            skos:Concept ;
+                                                                   skos:prefLabel "learning curve" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

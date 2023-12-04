@@ -1,0 +1,704 @@
+<http://w3id.org/mlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/mlso> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2016/03/mls#> .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/abstract> "An ontology for describing machine learning datasets, tasks, pipelines, experiments, software and publications. The ontology extends ML-Schema, DCAT, FaBiO and SDO."@en .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/created> "December 7th, 2023"@en .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/creator> "Anastasia Dimou"@en .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/creator> "Ioannis Dasoulas"@en .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
+<http://w3id.org/mlso> <http://purl.org/dc/terms/title> "The Machine Learning Sailor Ontology"@en .
+<http://w3id.org/mlso> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing machine learning datasets, tasks, pipelines, experiments, software and publications. The ontology extends ML-Schema, DCAT, FaBiO and SDO."@en .
+<http://w3id.org/mlso> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/accessRights
+<http://purl.org/dc/terms/accessRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/author
+<http://purl.org/dc/terms/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+<http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#sameAs
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher" .
+# 
+# http://w3id.org/mlso/hasAlgorithmType
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Algorithm> .
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasAlgorithmType> <http://purl.org/dc/terms/description> "A relation between an algorithm the category of algorithms that it belongs to." .
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an algorithm the category of algorithms that it belongs to." .
+<http://w3id.org/mlso/hasAlgorithmType> <http://www.w3.org/2000/01/rdf-schema#label> "has algorithm type" .
+# 
+# http://w3id.org/mlso/hasDataCharacteristicType
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#DataCharacteristic> .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://purl.org/dc/terms/description> "A relation between a data characteristic and the category of data characteristics that it belongs to." .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a data characteristic and the category of data characteristics that it belongs to." .
+<http://w3id.org/mlso/hasDataCharacteristicType> <http://www.w3.org/2000/01/rdf-schema#label> "has data characteristic type" .
+# 
+# http://w3id.org/mlso/hasDefaultTargetFeature
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Feature> .
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://purl.org/dc/terms/description> "A relation between a dataset and a feature that is the default target feature." .
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a dataset and a feature that is the default target feature." .
+<http://w3id.org/mlso/hasDefaultTargetFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has default target feature" .
+# 
+# http://w3id.org/mlso/hasEvaluationMeasureType
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationMeasure> .
+<http://www.w3.org/ns/mls#EvaluationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://purl.org/dc/terms/description> "A relation between an evaluation measure and the category of evaluation measures that it belongs to." .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an evaluation measure and the category of evaluation measures that it belongs to." .
+<http://w3id.org/mlso/hasEvaluationMeasureType> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation measure type" .
+# 
+# http://w3id.org/mlso/hasEvaluationProcedureType
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationProcedure> .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://purl.org/dc/terms/description> "A relation between an evaluation procedure and the category of evaluation procedures that it belongs to." .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an evaluation procedure and the category of evaluation procedures that it belongs to." .
+<http://w3id.org/mlso/hasEvaluationProcedureType> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation procedure type" .
+# 
+# http://w3id.org/mlso/hasFormat
+<http://w3id.org/mlso/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/hasFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://edamontology.org/format_1950> .
+<http://w3id.org/mlso/hasFormat> <http://purl.org/dc/terms/description> "A relation between a data file and its format." .
+<http://w3id.org/mlso/hasFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a data file and its format." .
+<http://w3id.org/mlso/hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format" .
+# 
+# http://w3id.org/mlso/hasIdFeature
+<http://w3id.org/mlso/hasIdFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasIdFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<http://w3id.org/mlso/hasIdFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Feature> .
+<http://w3id.org/mlso/hasIdFeature> <http://purl.org/dc/terms/description> "A relation between a dataset and a feature that is used for identifying the different instances of the dataset." .
+<http://w3id.org/mlso/hasIdFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a dataset and a feature that is used for identifying the different instances of the dataset." .
+<http://w3id.org/mlso/hasIdFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has id feature" .
+# 
+# http://w3id.org/mlso/hasLearningMethodType
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Algorithm> .
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasLearningMethodType> <http://purl.org/dc/terms/description> "A relation between an algorithm learning method and the category of algorithm learning methods that it belongs to." .
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an algorithm learning method and the category of algorithm learning methods that it belongs to." .
+<http://w3id.org/mlso/hasLearningMethodType> <http://www.w3.org/2000/01/rdf-schema#label> "has learning method type" .
+# 
+# http://w3id.org/mlso/hasModality
+<http://w3id.org/mlso/hasModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasModality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/hasModality> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/mlso/DataModality> .
+<http://w3id.org/mlso/hasModality> <http://purl.org/dc/terms/description> "A relation between a data entity and its data modality." .
+<http://w3id.org/mlso/hasModality> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a data entity and its data modality." .
+<http://w3id.org/mlso/hasModality> <http://www.w3.org/2000/01/rdf-schema#label> "has modality" .
+# 
+# http://w3id.org/mlso/hasRelatedImplementation
+<http://w3id.org/mlso/hasRelatedImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasRelatedImplementation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#InformationEntity> .
+<http://w3id.org/mlso/hasRelatedImplementation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Implementation> .
+<http://w3id.org/mlso/hasRelatedImplementation> <http://purl.org/dc/terms/description> "A relation between an entity and a machine learning implementation that leverages, references or is related to this entity in some way." .
+<http://w3id.org/mlso/hasRelatedImplementation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an entity and a machine learning implementation that leverages, references or is related to this entity in some way." .
+<http://w3id.org/mlso/hasRelatedImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "has related implementation" .
+# 
+# http://w3id.org/mlso/hasRelatedSoftware
+<http://w3id.org/mlso/hasRelatedSoftware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasRelatedSoftware> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#InformationEntity> .
+<http://w3id.org/mlso/hasRelatedSoftware> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Software> .
+<http://www.w3.org/ns/mls#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/hasRelatedSoftware> <http://purl.org/dc/terms/description> "A relation between an entity and a software implementation that leverages, references or is related to this entity in some way." .
+<http://w3id.org/mlso/hasRelatedSoftware> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an entity and a software implementation that leverages, references or is related to this entity in some way." .
+<http://w3id.org/mlso/hasRelatedSoftware> <http://www.w3.org/2000/01/rdf-schema#label> "has related software" .
+# 
+# http://w3id.org/mlso/hasScientificReference
+<http://w3id.org/mlso/hasScientificReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasScientificReference> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/mlso/scientificReferenceOf> .
+<http://w3id.org/mlso/hasScientificReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/mlso/ScientificWork> .
+<http://w3id.org/mlso/hasScientificReference> <http://purl.org/dc/terms/description> "A relation between an entity and a scientific work that references it." .
+<http://w3id.org/mlso/hasScientificReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an entity and a scientific work that references it." .
+<http://w3id.org/mlso/hasScientificReference> <http://www.w3.org/2000/01/rdf-schema#label> "has scientific reference" .
+# 
+# http://w3id.org/mlso/hasTaskType
+<http://w3id.org/mlso/hasTaskType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasTaskType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/mlso/hasType> .
+<http://w3id.org/mlso/hasTaskType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasTaskType> <http://purl.org/dc/terms/description> "A relation between a task and the category of tasks that it belongs to." .
+<http://w3id.org/mlso/hasTaskType> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a task and the category of tasks that it belongs to." .
+<http://w3id.org/mlso/hasTaskType> <http://www.w3.org/2000/01/rdf-schema#label> "has task type" .
+# 
+# http://w3id.org/mlso/hasType
+<http://w3id.org/mlso/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/hasType> <http://purl.org/dc/terms/description> "A relation between an instance and a vocabulary concept that can describe it." .
+<http://w3id.org/mlso/hasType> <http://www.w3.org/2000/01/rdf-schema#label> "has type" .
+# 
+# http://w3id.org/mlso/hasVariant
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/mlso/isVariantOf> .
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/hasVariant> <http://purl.org/dc/terms/description> "A relation between two data entities that share significant similarities but differ in certain characteristics or aspects." .
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between two data entities that share significant similarities but differ in certain characteristics or aspects." .
+<http://w3id.org/mlso/hasVariant> <http://www.w3.org/2000/01/rdf-schema#label> "has variant" .
+# 
+# http://w3id.org/mlso/ignoresFeature
+<http://w3id.org/mlso/ignoresFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/ignoresFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<http://w3id.org/mlso/ignoresFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Feature> .
+<http://w3id.org/mlso/ignoresFeature> <http://purl.org/dc/terms/description> "A relation between a dataset and a feature that is to be ignored when processing the dataset." .
+<http://w3id.org/mlso/ignoresFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a dataset and a feature that is to be ignored when processing the dataset." .
+<http://w3id.org/mlso/ignoresFeature> <http://www.w3.org/2000/01/rdf-schema#label> "ignores feature" .
+# 
+# http://w3id.org/mlso/isVariantOf
+<http://w3id.org/mlso/isVariantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/isVariantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is variant of" .
+# 
+# http://w3id.org/mlso/relatedToField
+<http://w3id.org/mlso/relatedToField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/relatedToField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/mlso/relatedToField> <http://purl.org/dc/terms/description> "A relation between an instance and the machine learning field that it is associated with." .
+<http://w3id.org/mlso/relatedToField> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an instance and the machine learning field that it is associated with." .
+<http://w3id.org/mlso/relatedToField> <http://www.w3.org/2000/01/rdf-schema#label> "related to field" .
+# 
+# http://w3id.org/mlso/scientificReferenceOf
+<http://w3id.org/mlso/scientificReferenceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/scientificReferenceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/mlso/ScientificWork> .
+<http://w3id.org/mlso/scientificReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "scientific reference of" .
+# 
+# http://w3id.org/mlso/trainedOn
+<http://w3id.org/mlso/trainedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/mlso/trainedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Model> .
+<http://w3id.org/mlso/trainedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/trainedOn> <http://purl.org/dc/terms/description> "A relation between a machine learning model and the data that it was trained on." .
+<http://w3id.org/mlso/trainedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a machine learning model and the data that it was trained on." .
+<http://w3id.org/mlso/trainedOn> <http://www.w3.org/2000/01/rdf-schema#label> "trained on" .
+# 
+# http://www.w3.org/ns/adms#status
+<http://www.w3.org/ns/adms#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/adms#status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/adms" .
+<http://www.w3.org/ns/adms#status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
+# 
+# http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/2000/01/rdf-schema#label> "access service" .
+# 
+# http://www.w3.org/ns/dcat#dataset
+<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset" .
+# 
+# http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#label> "distribution" .
+# 
+# http://www.w3.org/ns/dcat#servesDataset
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/2000/01/rdf-schema#label> "serves dataset" .
+# 
+# http://www.w3.org/ns/mls#achieves
+<http://www.w3.org/ns/mls#achieves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#achieves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#definedOn
+<http://www.w3.org/ns/mls#definedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#definedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#defines
+<http://www.w3.org/ns/mls#defines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#defines> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#executes
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#hasHyperParameter
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasHyperParameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#hasInput
+<http://www.w3.org/ns/mls#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasInput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#hasOutput
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#hasPart
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#hasQuality
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#implements
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#implements> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#realizes
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#realizes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/mls#specifiedBy
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+# 
+# http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/prov" .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#label> "at location" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/mlso/ScientificWork> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "hasVersion" .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#label> "issued" .
+# 
+# http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/terms/licence
+<http://purl.org/dc/terms/licence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/licence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/licence> <http://www.w3.org/2000/01/rdf-schema#label> "licence" .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/spar/fabio/abstract
+<http://purl.org/spar/fabio/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/abstract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
+# 
+# http://purl.org/spar/fabio/hasArXivId
+<http://purl.org/spar/fabio/hasArXivId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/hasArXivId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+<http://purl.org/spar/fabio/hasArXivId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/fabio/" .
+# 
+# http://schema.org/codeRepository
+<http://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/codeRepository> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/codeRepository> <http://www.w3.org/2000/01/rdf-schema#label> "code repository" .
+# 
+# http://w3id.org/mlso/hasCacheFormat
+<http://w3id.org/mlso/hasCacheFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasCacheFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/mlso/hasCacheFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has cache format" .
+# 
+# http://w3id.org/mlso/hasDataLoaderLocation
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Data> .
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://purl.org/dc/terms/description> "A relation between a data entity and an online location that its data loader can be found." .
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a data entity and an online location that its data loader can be found." .
+<http://w3id.org/mlso/hasDataLoaderLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has data loader location" .
+# 
+# http://w3id.org/mlso/hasMD5
+<http://w3id.org/mlso/hasMD5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasMD5> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<http://w3id.org/mlso/hasMD5> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/mlso/hasMD5> <http://purl.org/dc/terms/description> "A relation between a dataset distribution and its md5 hash." .
+<http://w3id.org/mlso/hasMD5> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a dataset distribution and its md5 hash." .
+<http://w3id.org/mlso/hasMD5> <http://www.w3.org/2000/01/rdf-schema#label> "has MD5" .
+# 
+# http://w3id.org/mlso/hasNumberOfReferences
+<http://w3id.org/mlso/hasNumberOfReferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasNumberOfReferences> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://w3id.org/mlso/hasNumberOfReferences> <http://purl.org/dc/terms/description> "A relation between an entity and the number of times it is referenced in scientific publications." .
+<http://w3id.org/mlso/hasNumberOfReferences> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an entity and the number of times it is referenced in scientific publications." .
+<http://w3id.org/mlso/hasNumberOfReferences> <http://www.w3.org/2000/01/rdf-schema#label> "has number of references" .
+# 
+# http://w3id.org/mlso/hasPredictionsLocation
+<http://w3id.org/mlso/hasPredictionsLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasPredictionsLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://w3id.org/mlso/hasPredictionsLocation> <http://purl.org/dc/terms/description> "A relation between a machine learning experiment execution and the URI where its predictions can be found." .
+<http://w3id.org/mlso/hasPredictionsLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a machine learning experiment execution and the URI where its predictions can be found." .
+<http://w3id.org/mlso/hasPredictionsLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has predictions location" .
+# 
+# http://w3id.org/mlso/hasTrainTestSplitIndices
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Task> .
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://purl.org/dc/terms/description> "A relation between a machine learning task and the dataset split it uses on the dataset that it is defined on." .
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a machine learning task and the dataset split it uses on the dataset that it is defined on." .
+<http://w3id.org/mlso/hasTrainTestSplitIndices> <http://www.w3.org/2000/01/rdf-schema#label> "has train test split indices" .
+# 
+# http://www.w3.org/ns/dcat#downloadURL
+<http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/2000/01/rdf-schema#label> "download URL" .
+# 
+# http://www.w3.org/ns/dcat#keyword
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#label> "keyword" .
+# 
+# http://www.w3.org/ns/dcat#landingPage
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/2000/01/rdf-schema#label> "landing page" .
+# 
+# https://w3id.org/okn/o/sd#softwareRequirements
+<https://w3id.org/okn/o/sd#softwareRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sd#softwareRequirements> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/okn/o/sd#" .
+<https://w3id.org/okn/o/sd#softwareRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "software requirements" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://edamontology.org/format_1950
+<http://edamontology.org/format_1950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://edamontology.org/format_1950> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<http://edamontology.org/format_1950> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://edamontology.org/" .
+<http://edamontology.org/format_1950> <http://www.w3.org/2000/01/rdf-schema#label> "Format" .
+# 
+# http://w3id.org/mlso/DataModality
+<http://w3id.org/mlso/DataModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/DataModality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<http://w3id.org/mlso/DataModality> <http://purl.org/dc/terms/description> "Data modality refers to the different types or forms of data that exist, and it is often used to describe the way information is represented or encoded in a dataset." .
+<http://w3id.org/mlso/DataModality> <http://www.w3.org/2000/01/rdf-schema#comment> "Data modality refers to the different types or forms of data that exist, and it is often used to describe the way information is represented or encoded in a dataset." .
+<http://w3id.org/mlso/DataModality> <http://www.w3.org/2000/01/rdf-schema#label> "Data Modality" .
+# 
+# http://w3id.org/mlso/HyperParameterCharacteristic
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#DataCharacteristic> .
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://purl.org/dc/terms/description> "HyperParameter Characteristic is a distinguishing quality or property that distinguish one hyper-parameter from another." .
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "HyperParameter Characteristic is a distinguishing quality or property that distinguish one hyper-parameter from another." .
+<http://w3id.org/mlso/HyperParameterCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "HyperParameter Characteristic" .
+# 
+# http://w3id.org/mlso/ScientificWork
+<http://w3id.org/mlso/ScientificWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/mlso/ScientificWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2004/02/skos/core#" .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept" .
+# 
+# http://www.w3.org/ns/dcat#Catalog
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#Dataset> .
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/2000/01/rdf-schema#label> "Catalog" .
+# 
+# http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#label> "Data Service" .
+# 
+# http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#Data> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/dcat" .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution" .
+# 
+# http://www.w3.org/ns/mls#Algorithm
+<http://www.w3.org/ns/mls#Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Algorithm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Algorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algorithm" .
+# 
+# http://www.w3.org/ns/mls#Data
+<http://www.w3.org/ns/mls#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Data> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/mls#Task> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/mls#defines> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/mls#Data> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# 
+# http://www.w3.org/ns/mls#DataCharacteristic
+<http://www.w3.org/ns/mls#DataCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#DataCharacteristic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#DataCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Data Characteristic" .
+# 
+# http://www.w3.org/ns/mls#Dataset
+<http://www.w3.org/ns/mls#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+<http://www.w3.org/ns/mls#Dataset> <http://www.w3.org/2002/07/owl#sameAs> "https://www.w3.org/ns/dcat#Dataset" .
+# 
+# http://www.w3.org/ns/mls#DatasetCharacteristic
+<http://www.w3.org/ns/mls#DatasetCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#DatasetCharacteristic> <http://purl.org/dc/terms/description> "Dataset Characteristic is a distinguishing quality or property that distinguish one dataset from another." .
+<http://www.w3.org/ns/mls#DatasetCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset Characteristic is a distinguishing quality or property that distinguish one dataset from another." .
+<http://www.w3.org/ns/mls#DatasetCharacteristic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/mls" .
+<http://www.w3.org/ns/mls#DatasetCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Characteristic" .
+# 
+# http://www.w3.org/ns/mls#EvaluationMeasure
+<http://www.w3.org/ns/mls#EvaluationMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#EvaluationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Measure" .
+# 
+# http://www.w3.org/ns/mls#EvaluationProcedure
+<http://www.w3.org/ns/mls#EvaluationProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#EvaluationProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#EvaluationProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Procedure" .
+# 
+# http://www.w3.org/ns/mls#EvaluationSpecification
+<http://www.w3.org/ns/mls#EvaluationSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#EvaluationSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#EvaluationSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Specification" .
+# 
+# http://www.w3.org/ns/mls#Experiment
+<http://www.w3.org/ns/mls#Experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Experiment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/mlso> .
+<http://www.w3.org/ns/mls#Experiment> <http://www.w3.org/2000/01/rdf-schema#label> "Experiment" .
+# 
+# http://www.w3.org/ns/mls#Feature
+<http://www.w3.org/ns/mls#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/mls#FeatureCharacteristic> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/mls#hasQuality> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/mls#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://www.w3.org/ns/mls#FeatureCharacteristic
+<http://www.w3.org/ns/mls#FeatureCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#FeatureCharacteristic> <http://purl.org/dc/terms/description> "Feature Characteristic is a distinguishing quality or property that distinguish one dataset feature from another." .
+<http://www.w3.org/ns/mls#FeatureCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Feature Characteristic is a distinguishing quality or property that distinguish one dataset feature from another." .
+<http://www.w3.org/ns/mls#FeatureCharacteristic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/mls" .
+<http://www.w3.org/ns/mls#FeatureCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Feature Characteristic" .
+# 
+# http://www.w3.org/ns/mls#HyperParameter
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/2000/01/rdf-schema#label> "HyperParameter" .
+# 
+# http://www.w3.org/ns/mls#HyperParameterSetting
+<http://www.w3.org/ns/mls#HyperParameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#HyperParameterSetting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#HyperParameterSetting> <http://www.w3.org/2000/01/rdf-schema#label> "HyperParameter Setting" .
+# 
+# http://www.w3.org/ns/mls#Implementation
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation" .
+# 
+# http://www.w3.org/ns/mls#ImplementationCharacteristic
+<http://www.w3.org/ns/mls#ImplementationCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#ImplementationCharacteristic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#ImplementationCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation Characteristic" .
+# 
+# http://www.w3.org/ns/mls#InformationEntity
+<http://www.w3.org/ns/mls#InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/mls#Model
+<http://www.w3.org/ns/mls#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Model> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model" .
+# 
+# http://www.w3.org/ns/mls#ModelCharacteristic
+<http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Model Characteristic" .
+# 
+# http://www.w3.org/ns/mls#ModelEvaluation
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Model Evaluation" .
+# 
+# http://www.w3.org/ns/mls#Process
+<http://www.w3.org/ns/mls#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process" .
+# 
+# http://www.w3.org/ns/mls#Quality
+<http://www.w3.org/ns/mls#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Quality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/mls" .
+<http://www.w3.org/ns/mls#Quality> <http://www.w3.org/2000/01/rdf-schema#label> "Quality" .
+# 
+# http://www.w3.org/ns/mls#Run
+<http://www.w3.org/ns/mls#Run> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Run> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Run> <http://www.w3.org/2000/01/rdf-schema#label> "Run" .
+# 
+# http://www.w3.org/ns/mls#Software
+<http://www.w3.org/ns/mls#Software> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software" .
+<http://www.w3.org/ns/mls#Software> <http://www.w3.org/2002/07/owl#sameAs> "https://w3id.org/okn/o/sd#Software" .
+# 
+# http://www.w3.org/ns/mls#Study
+<http://www.w3.org/ns/mls#Study> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Study> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Study> <http://www.w3.org/2000/01/rdf-schema#label> "Study" .
+# 
+# http://www.w3.org/ns/mls#Task
+<http://www.w3.org/ns/mls#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Task> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
+# 
+# http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/prov#" .
+<http://www.w3.org/ns/prov#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/" .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# https://w3id.org/okn/o/sd#SourceCode
+<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/okn/o/sd" .
+<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Source Code" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spar/fabio/Work
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2002/07/owl#sameAs> <http://w3id.org/mlso/ScientificWork> .
+# 
+# http://w3id.org/mlso/ScientificWork
+# 
+# http://w3id.org/mlso/ScientificWork
+<http://w3id.org/mlso/ScientificWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic citation" .
+# 
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
+# 
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# 
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#label> "language" .
+# 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "title" .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms" .
+# 
+<http://w3id.org/mlso/ScientificWork> <http://purl.org/dc/terms/description> "A formal and structured document that presents the results, methodology, analysis, and conclusions of a scientific investigation or study." .
+<http://w3id.org/mlso/ScientificWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal and structured document that presents the results, methodology, analysis, and conclusions of a scientific investigation or study." .
+<http://w3id.org/mlso/ScientificWork> <http://www.w3.org/2000/01/rdf-schema#label> "Scientific Work" .
+# 
+<http://www.w3.org/ns/mls#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/ns/mls> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

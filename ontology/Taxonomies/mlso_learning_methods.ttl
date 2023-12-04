@@ -1,0 +1,401 @@
+@prefix : <http://w3id.org/mlso/vocab/learning_method/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/learning_method> .
+
+<http://w3id.org/mlso/vocab/learning_method> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/learning_method/AQLearning
+:AQLearning rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:seeAlso "https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1428-6_845" ;
+            skos:broader :Supervised_Learning_Algorithm ;
+            skos:definition "AQ learning is a form of supervised machine learning of rules from examples and background knowledge performed by the well-known AQ family of programs and other machine learning methods. AQ learning pioneered separate-and-conquer approach to rule learning in which examples are sequentially covered until a complete class description is formed. Derived knowledge is represented in a highly expressive form of attributional rules." ;
+            skos:prefLabel "AQ Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/ActiveLearning
+:ActiveLearning rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Active Learning is a machine learning approach where the algorithm interacts with the data by selecting and labeling the most informative instances for training. Unlike passive learning, where the model learns from a fixed dataset, active learning dynamically identifies examples that pose the greatest uncertainty or ambiguity, allowing the model to achieve higher accuracy with fewer labeled samples. This iterative process enhances the efficiency of the learning algorithm, particularly when labeled data is scarce or expensive to acquire, as it focuses on acquiring information strategically to improve model performance." ;
+                skos:prefLabel "Active Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/AdversarialLearning
+:AdversarialLearning rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "Adversarial Learning is a machine learning paradigm that involves training models in the presence of adversarial examples – data specifically crafted to mislead the model. This approach aims to improve a model's robustness and generalization by exposing it to perturbed inputs designed to deceive or confuse. Adversarial learning is crucial in enhancing the security and reliability of machine learning systems, as it helps models better handle unexpected scenarios and vulnerabilities, ultimately leading to more resilient and trustworthy artificial intelligence applications." ;
+                     skos:prefLabel "Adversarial Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/AnalyticalLearning
+:AnalyticalLearning rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "Analytical Learning refers to a machine learning paradigm that emphasizes the extraction of explicit rules and patterns from data to gain insights and make predictions. Unlike some black-box models, analytical learning methods often prioritize interpretability, allowing humans to comprehend and trust the decision-making process. These approaches, such as decision trees or rule-based systems, are valuable in scenarios where understanding the underlying logic of the model is essential, such as in medical diagnosis or regulatory compliance, facilitating transparent and accountable decision-making." ;
+                    skos:prefLabel "Analytical Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/BayesianLearning
+:BayesianLearning rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "Bayesian Learning is an approach in machine learning that is rooted in Bayesian statistics. It involves updating the probability distribution over hypotheses based on both prior knowledge and observed evidence. In Bayesian Learning, models are not treated as fixed entities but as probability distributions representing the uncertainty associated with different hypotheses. This methodology allows for the incorporation of new data, updating beliefs iteratively, and providing a principled way to handle uncertainty in predictions. Bayesian Learning is particularly useful in situations where there is limited data, and it offers a robust framework for decision-making under uncertainty." ;
+                  skos:prefLabel "Bayesian Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/ConceptLearning
+:ConceptLearning rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Concept Learning is a fundamental task in machine learning where the goal is to infer general rules or patterns from specific examples. This process involves identifying and defining concepts based on a set of labeled instances, allowing a model to make predictions about new, unseen instances. In concept learning, the algorithm aims to generalize from the provided examples, distinguishing relevant features that characterize the concept. This approach is crucial in various applications, such as classification tasks, where the goal is to categorize input data into predefined classes based on learned concepts, fostering the model's ability to recognize and adapt to patterns in the data." ;
+                 skos:prefLabel "Concept Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/CurriculumLearning
+:CurriculumLearning rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "Curriculum Learning is a machine learning approach inspired by educational principles, where the learning process is organized in a structured curriculum. In the context of machine learning, this involves presenting training examples to the model in a gradually increasing order of complexity or difficulty. The idea is to start with simpler, well-defined instances and progressively introduce more challenging samples as the model learns. This helps the model develop a strong foundation on simpler concepts before tackling more complex patterns, facilitating more effective and robust learning. Curriculum Learning has been applied across various domains, enhancing the training efficiency and performance of machine learning models." ;
+                    skos:prefLabel "Curriculum Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/EnsembleLearning
+:EnsembleLearning rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                  skos:definition """Ensemble learning is a machine learning paradigm where
+multiple learners are trained to solve the same problem.
+They obtain better predictive performance than could be obtained
+from any one of the constituent learning algorithms.
+An ensemble contains a number of learners which are usually
+called base learners. The generalization ability of an
+ensemble is usually much stronger than that of the base
+learners.""" ;
+                  skos:prefLabel "Ensemble Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/FederatedLearning
+:FederatedLearning rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   rdfs:seeAlso """Federated learning enables training in a distributed manner
+using a large corpus of data residing on independent
+devices. It de-centralizes model training without sharing
+data samples among individual entities. This addresses the
+fundamental problems of privacy, ownership, and locality
+of data.""" ;
+                   skos:prefLabel "Federated Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/FewShotLearning
+:FewShotLearning rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Few-shot learning is a machine learning paradigm that focuses on training models to make accurate predictions with only a small number of examples per class. Traditional machine learning approaches often require large datasets for training, but few-shot learning aims to address scenarios where limited labeled data is available. Typically, few-shot learning involves training a model on a small \"support set\" of labeled examples per class, and then evaluating its performance on a \"query set\" of unseen examples. Techniques such as meta-learning and transfer learning are commonly employed in few-shot learning to enable models to generalize effectively from sparse data, making it applicable in tasks where obtaining abundant labeled data is challenging." ;
+                 skos:prefLabel "Few-shot Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/IncrementalLearning
+:IncrementalLearning rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                     skos:definition """Incremental learning strategy is very similar to (or at times
+same as) online learning. The main difference is that in
+online learning a training sample is used only once from an
+incoming data stream. In incremental learning, samples are
+usually picked from a finite dataset and the same samples
+can be processed multiple times.""" ;
+                     skos:prefLabel "Incremental Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/InductiveLearning
+:InductiveLearning rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                   skos:definition """The goal is to use statistical reasoning to identify features
+that empirically distinguish different input examples. The
+performance is highly dependent on the number of training
+samples.""" ;
+                   skos:prefLabel "Inductive Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/LearningMethod
+:LearningMethod rdf:type owl:NamedIndividual ,
+                         skos:Collection ;
+                skos:member :ActiveLearning ,
+                            :AdversarialLearning ,
+                            :AnalyticalLearning ,
+                            :BayesianLearning ,
+                            :ConceptLearning ,
+                            :CurriculumLearning ,
+                            :EnsembleLearning ,
+                            :FederatedLearning ,
+                            :FewShotLearning ,
+                            :IncrementalLearning ,
+                            :InductiveLearning ,
+                            :MetaLearning ,
+                            :MetricLearning ,
+                            :MultiModalLearning ,
+                            :MultiTaskLearning ,
+                            :OnlineLearning ,
+                            :Reinforcement_Learning_Algorithm ,
+                            :SelfSupervisedLearning ,
+                            :SelfTaughtLearning ,
+                            :Semi-supervised_Learning_Algorithm ,
+                            :SequentialLearning ,
+                            :Supervised_Learning_Algorithm ,
+                            :TargetedLearning ,
+                            :TransferLearning ,
+                            :Unsupervised_Learning_Algorithm ;
+                skos:prefLabel "Learning Method" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/MetaLearning
+:MetaLearning rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+              skos:definition """In a meta-learning paradigm, the machine learning model
+gains experience over multiple learning episodes that often
+cover a distribution of related tasks and then uses this experience
+to improve any future learning performance. The
+goal is to solve new tasks with only a small number of training
+samples. In contrast to conventional machine learning
+approaches where a given task is learned from scratch using
+a fixed learning algorithm, meta-learning aims to improve
+the learning algorithm itself, given the experience of multiple
+learning episodes, hence is also referred to as learn the
+learning process. Examples include few-shot learning and
+metric learning.""" ;
+              skos:prefLabel "Meta Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/MetricLearning
+:MetricLearning rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                skos:definition """Metric learning is a form of machine learning that utilizes
+distances between data samples. It learns from similarity
+or dis-similarity among the examples. It is often used for
+dimensionality reduction, recommendation systems, identity
+verification etc.""" ;
+                skos:prefLabel "Metric Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/MultiModalLearning
+:MultiModalLearning rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "Multi-modal Learning refers to a machine learning paradigm that involves processing and integrating information from multiple modes or sources of data. These modes can include different types of input such as text, images, audio, and more. The goal of multi-modal learning is to develop models that can effectively understand, represent, and learn patterns from diverse data types simultaneously." ;
+                    skos:prefLabel "Multi-modal Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/MultiTaskLearning
+:MultiTaskLearning rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "Multi-task Learning is a machine learning paradigm where a model is trained to perform multiple related tasks concurrently. Instead of training separate models for each task, multi-task learning aims to leverage commonalities and relationships between tasks to improve the overall performance of the model. The idea is that the shared knowledge across tasks can lead to better generalization and learning efficiency." ;
+                   skos:prefLabel "Multi-task Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/OnlineLearning
+:OnlineLearning rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                skos:definition """Online learning involves training using data that becomes
+available in a sequential order. This technique contrasts with
+batch sampling based learning where the complete training
+data is always available. It is useful in scenarios where
+algorithms are required to dynamically adapt to novel data
+patterns from all incoming data.""" ;
+                skos:prefLabel "Online Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/Reinforcement_Learning_Algorithm
+:Reinforcement_Learning_Algorithm rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                                  skos:definition """Reinforcement learning is applied when the task at hand
+is to make a sequence of decisions towards a final reward.
+During the learning process, an artificial agent gets either
+rewards or penalties for the actions it performs. Its goal is
+to maximize the total reward. Examples include learning
+agents to play computer games or performing robotics tasks
+with end goal.""" ;
+                                  skos:prefLabel "Reinforcement Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/SelfSupervisedLearning
+:SelfSupervisedLearning rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                        skos:definition """Self-supervised learning is a form of unsupervised learning
+where the training data is autonomously (or automatically)
+labeled. The data is not required to be manually labelled
+but is labeled by finding and exploiting the relations (or
+correlations) between different input features. This is done
+in an unsupervised manner by forcing the network to learn
+semantic representation about the data. Knowledge is then
+transferred to the model for the main task. It is sometimes
+referred to as pretext learning.""" ;
+                        skos:prefLabel "Self-supervised Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/SelfTaughtLearning
+:SelfTaughtLearning rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    rdfs:seeAlso "Self-taught learning is a machine learning paradigm where a model aims to learn from unlabeled or weakly labeled data without explicit supervision. In this approach, the model endeavors to discover meaningful patterns and representations in the data on its own, often leveraging unsupervised or semi-supervised learning techniques." ;
+                    skos:prefLabel "Self-taught Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/Semi-supervised_Learning_Algorithm
+:Semi-supervised_Learning_Algorithm rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                                    skos:definition """Semi-Supervised Learning is an intermediate between supervised
+and unsupervised learning techniques. These algorithms
+are trained using a combination of labeled and unlabeled
+data. In a common setting, there is a small amount of
+labeled data and a very large amount of unlabeled data. A
+basic procedure involved is that first similar data is clustered
+using an unsupervised learning algorithm and then existing
+labeled data is used to label the rest of the unlabeled data.""" ;
+                                    skos:prefLabel "Semi-supervised Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/SequentialLearning
+:SequentialLearning rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                    skos:definition """Sequential learning is a term widely used for learning with
+data that has a temporal ordering to it. Under certain conditions,
+it can be also interpreted as a type of online learning.""" ;
+                    skos:prefLabel "Sequential Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/Supervised_Learning_Algorithm
+:Supervised_Learning_Algorithm rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                               skos:definition """Supervised learning is applied when the data is in the form
+of input variables and output target values. The algorithm
+learns the mapping function from the input to the output. The availability of large scale labeled data samples makes it an expensive approach for tasks where data is scarce.""" ;
+                               skos:narrower :AQLearning ;
+                               skos:prefLabel "Supervised Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/TargetedLearning
+:TargetedLearning rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "Targeted Learning is a statistical and machine learning framework that focuses on estimating treatment effects or making predictions in observational studies and randomized controlled trials. It is particularly useful when dealing with complex and high-dimensional data. The key idea behind targeted learning is to construct estimators that directly target the quantity of interest, such as a treatment effect or a predictive outcome, while accounting for confounding variables and potential biases in the data." ;
+                  skos:prefLabel "Targeted Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/TransferLearning
+:TransferLearning rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                  skos:definition """Transfer learning refers to training (or fine-tuning) a developed
+algorithm on a different yet related task. The main idea
+is about transferring knowledge from one supervised learning
+task to another and hence it generally requires further labeled data from a different but related task. One limitation of this approach is the requirement of additional labeled data, rather than unlabeled data, for the new supervised learning tasks.""" ;
+                  skos:prefLabel "Transfer Learning" .
+
+
+###  http://w3id.org/mlso/vocab/learning_method/Unsupervised_Learning_Algorithm
+:Unsupervised_Learning_Algorithm rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 rdfs:seeAlso "doi:10.20944/preprints202007.0230.v1" ;
+                                 skos:definition """Unsupervised learning is applied when the data is available
+only in the form of an input and there is no corresponding
+output variable. Such algorithms model the underlying
+patterns in the data in order to learn more about its characteristics.""" ;
+                                 skos:prefLabel "Unsupervised Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/ContrastiveLearning
+<http://w3id.org/mlso/vocab/ml_task_type/ContrastiveLearning> rdf:type owl:NamedIndividual ,
+                                                                       skos:Concept ;
+                                                              skos:definition "Contrastive Learning is a machine learning paradigm focused on training models by emphasizing the differences or contrasts between pairs of data samples. The approach involves presenting the model with pairs of similar instances (positive pairs) and dissimilar instances (negative pairs) and optimizing the model to reduce the similarity gap between positive pairs and increase it between negative pairs. By learning from the distinctions between examples, contrastive learning enables the model to capture meaningful representations that highlight relevant features and patterns in the data. This methodology has proven effective in various domains, including computer vision and natural language processing, contributing to advancements in unsupervised and self-supervised learning techniques." ;
+                                                              skos:prefLabel "Contrastive Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/ImitationLearning
+<http://w3id.org/mlso/vocab/ml_task_type/ImitationLearning> rdf:type owl:NamedIndividual ,
+                                                                     skos:Concept ;
+                                                            skos:definition "Imitation Learning, also known as learning from demonstration, is a machine learning paradigm where a model learns a task by observing and mimicking the behavior demonstrated by an expert. In this approach, the model is trained on a dataset of input-output pairs generated by the expert's actions. The goal is for the model to generalize and replicate the expert's decision-making or actions when presented with new, unseen examples." ;
+                                                            skos:prefLabel "Imitation Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/Multi-ViewLearning
+<http://w3id.org/mlso/vocab/ml_task_type/Multi-ViewLearning> rdf:type owl:NamedIndividual ,
+                                                                      skos:Concept ;
+                                                             skos:definition "Multi-View Learning is a machine learning paradigm that involves considering multiple perspectives or representations of the data, often referred to as \"views.\" In this approach, each view provides a different set of features or information about the same set of instances. The goal is to jointly leverage these diverse views to enhance the overall learning performance." ;
+                                                             skos:prefLabel "Multi-View Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/One-ShotLearning
+<http://w3id.org/mlso/vocab/ml_task_type/One-ShotLearning> rdf:type owl:NamedIndividual ,
+                                                                    skos:Concept ;
+                                                           skos:definition "One-Shot Learning is a machine learning paradigm that focuses on training models to recognize and generalize from just a single example per class. Unlike traditional machine learning approaches that require large amounts of labeled data for each category, one-shot learning aims to enable models to make accurate predictions even when only a minimal amount of training examples is available." ;
+                                                           skos:prefLabel "One-Shot Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/Q-Learning
+<http://w3id.org/mlso/vocab/ml_task_type/Q-Learning> rdf:type owl:NamedIndividual ,
+                                                              skos:Concept ;
+                                                     skos:definition "Q-Learning is a reinforcement learning technique used for making decisions in an environment by learning an optimal action-selection policy. It's particularly useful when the agent has limited prior knowledge about the environment and learns through trial and error. The algorithm maintains a Q-table that stores the expected cumulative rewards for taking a particular action in a given state." ;
+                                                     skos:prefLabel "Q-Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/SparseLearning
+<http://w3id.org/mlso/vocab/ml_task_type/SparseLearning> rdf:type owl:NamedIndividual ,
+                                                                  skos:Concept ;
+                                                         skos:definition "Sparse learning refers to a set of machine learning techniques that aim to create models with sparse representations, meaning that the models involve only a small subset of features while effectively capturing the underlying patterns in the data. The idea is to encourage the model to focus on the most relevant features and disregard less important ones, leading to more interpretable and efficient models." ;
+                                                         skos:prefLabel "Sparse Learning" .
+
+
+###  http://w3id.org/mlso/vocab/ml_task_type/Zero-ShotLearning
+<http://w3id.org/mlso/vocab/ml_task_type/Zero-ShotLearning> rdf:type owl:NamedIndividual ,
+                                                                     skos:Concept ;
+                                                            skos:definition "Zero-Shot Learning is a machine learning paradigm that deals with the scenario where a model is required to make predictions for classes it has never seen during training. Unlike traditional learning approaches that assume all classes are observed during training, zero-shot learning enables a model to generalize to new classes by learning from a set of seen (or known) classes and their relationships." ;
+                                                            skos:prefLabel "Zero-Shot Learning" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2016/03/mls#" uri="https://raw.githubusercontent.com/ML-Schema/core/master/MLSchema.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2016/03/mls#" uri="file:/Users/ioannisdasoulas/Desktop/Ontologies/mls.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1693905499266" name="http://w3id.org/mlso" uri="ml-onto.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,1151 @@
+@prefix : <http://w3id.org/mlso/vocab/dataset_characteristic/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/dataset_characteristic/> .
+
+<http://w3id.org/mlso/vocab/dataset_characteristic> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/AreaUnderCurveMeasurement
+:AreaUnderCurveMeasurement rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:narrower :J48AreaUnderCurve ,
+                                         :cfs_subset_eval_decision_stump_auc ,
+                                         :cfs_subset_eval_naive_bayes_auc ,
+                                         :csf_subject_eval_knn1n_auc ,
+                                         :decision_stump_auc ,
+                                         :knn1n_area_under_curve ;
+                           skos:prefLabel "Area Under Curve Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/CFS_Subject_Eval_Decision_Stump
+:CFS_Subject_Eval_Decision_Stump rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :cfs_subject_evaluation ;
+                                 skos:narrower :cfs_subject_eval_decision_stump_error_rate ,
+                                               :cfs_subset_eval_decision_stump_auc ,
+                                               :cfs_subset_eval_decision_stump_kappa ;
+                                 skos:prefLabel "CFS Subject Eval Decision Stump" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/CFS_Subject_Eval_KNN1N
+:CFS_Subject_Eval_KNN1N rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :cfs_subject_evaluation ;
+                        skos:narrower :csf_subject_eval_knn1n_auc ,
+                                      :csf_subject_eval_knn1n_err_rate ,
+                                      :csf_subject_eval_knn1n_kappa ;
+                        skos:prefLabel "CFS Subject Eval KNN1N" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/CFS_Subject_Eval_Naive_Bayes
+:CFS_Subject_Eval_Naive_Bayes rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :cfs_subject_evaluation ;
+                              skos:narrower :cfs_subset_eval_naive_bayes_auc ,
+                                            :cfs_subset_eval_naive_bayes_err_rate ,
+                                            :cfs_subset_eval_naive_bayes_kappa ;
+                              skos:prefLabel "CFS Subject Eval Naive Bayes" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/ClassEntropy
+:ClassEntropy rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:broader :Entropy ;
+	      skos:definition "Entropy of the target attribute values.";
+              skos:prefLabel "Class Entropy" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Dataset_Characteristic
+:Dataset_Characteristic rdf:type owl:NamedIndividual ,
+                                 skos:Collection ;
+                        skos:member :AreaUnderCurveMeasurement ,
+                                    :Decision_Stump ,
+                                    :Entropy ,
+                                    :ErrorRateMeasurement ,
+                                    :J48_Measurement ,
+                                    :KNN1N ,
+                                    :KappaMeasurement ,
+                                    :Maximum_Measurement ,
+                                    :Mean_Measurement ,
+                                    :Minimum_Measurement ,
+                                    :Naive_Bayes_Measurement ,
+                                    :Quantity_Measurement ,
+                                    :Quartile_Measurement ,
+                                    :REP_Tree ,
+                                    :Random_Tree ,
+                                    :Standard_Deviation ,
+                                    :auto_corellation ,
+                                    :cfs_subject_evaluation ;
+                        skos:prefLabel "Dataset Characteristic" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Decision_Stump
+:Decision_Stump rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:narrower :decision_stump_auc ,
+                              :decision_stump_err_rate ,
+                              :decision_stump_kappa ;
+                skos:prefLabel "Decision Stump" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Entropy
+:Entropy rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:narrower :ClassEntropy ,
+                       :MaxAttributeEntropy ,
+                       :MinAttributeEntropy ;
+         skos:prefLabel "Entropy" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/ErrorRateMeasurement
+:ErrorRateMeasurement rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:narrower :J48ErrorRate ,
+                                    :cfs_subject_eval_decision_stump_error_rate ,
+                                    :cfs_subset_eval_naive_bayes_err_rate ,
+                                    :csf_subject_eval_knn1n_err_rate ,
+                                    :decision_stump_err_rate ,
+                                    :knn1n_error_rate ;
+                      skos:prefLabel "Error Rate Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/J48AreaUnderCurve
+:J48AreaUnderCurve rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:broader :AreaUnderCurveMeasurement ,
+                                :J48_Measurement ;
+                   skos:narrower :j48_00001_area_under_curve ,
+                                 :j48_0001_area_under_curve ,
+                                 :j48_001_area_under_curve ;
+                   skos:prefLabel "J48 Area Under Curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/J48ErrorRate
+:J48ErrorRate rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:broader :ErrorRateMeasurement ,
+                           :J48_Measurement ;
+              skos:narrower :j48_00001_error_rate ,
+                            :j48_0001_error_rate ,
+                            :j48_001_error_rate ;
+              skos:prefLabel "J48 Error Rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/J48Kappa
+:J48Kappa rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:broader :J48_Measurement ,
+                       :KappaMeasurement ;
+          skos:narrower :j48_00001_kappa ,
+                        :j48_0001_kappa ,
+                        :j48_001_kappa ;
+          skos:prefLabel "J48 Kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/J48_Measurement
+:J48_Measurement rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:narrower :J48AreaUnderCurve ,
+                               :J48ErrorRate ,
+                               :J48Kappa ;
+                 skos:prefLabel "J48 Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/KNN1N
+:KNN1N rdf:type owl:NamedIndividual ,
+                skos:Concept ;
+       skos:prefLabel "KNN1N" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/KappaMeasurement
+:KappaMeasurement rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:narrower :J48Kappa ,
+                                :cfs_subset_eval_decision_stump_kappa ,
+                                :cfs_subset_eval_naive_bayes_kappa ,
+                                :csf_subject_eval_knn1n_kappa ,
+                                :decision_stump_kappa ,
+                                :knn1n_kappa ;
+                  skos:prefLabel "Kappa Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/MaxAttributeEntropy
+:MaxAttributeEntropy rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Entropy ,
+                                  :Maximum_Measurement ;
+                     skos:prefLabel "Max Attribute Entropy" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Maximum_Measurement
+:Maximum_Measurement rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:narrower :MaxAttributeEntropy ,
+                                   :max_kurtosis_of_numeric_atts ,
+                                   :max_means_of_numeric_atts ,
+                                   :max_mutual_information ,
+                                   :max_nominal_att_distinct_values ,
+                                   :max_skewness_of_numeric_atts ,
+                                   :max_standard_dev_of_numeric_atts ;
+                     skos:prefLabel "Maximum Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Mean_Measurement
+:Mean_Measurement rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:narrower :mean_attribute_entropy ,
+                                :mean_kurtosis_of_numeric_atts ,
+                                :mean_means_of_numeric_atts ,
+                                :mean_mutual_information ,
+                                :mean_noise_to_signal_ratio ,
+                                :mean_nominal_att_distinct_values ,
+                                :mean_skewness_of_numeric_atts ,
+                                :mean_standard_dev_of_numeric_atts ;
+                  skos:prefLabel "Mean Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/MinAttributeEntropy
+:MinAttributeEntropy rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Entropy ,
+                                  :Minimum_Measurement ;
+                     skos:prefLabel "Min Attribute Entropy" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Minimum_Measurement
+:Minimum_Measurement rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:narrower :MinAttributeEntropy ,
+                                   :min_kurtosis_of_numeric_atts ,
+                                   :min_means_of_numeric_atts ,
+                                   :min_mutual_information ,
+                                   :min_nominal_att_distinct_values ,
+                                   :min_skewness_of_numeric_atts ,
+                                   :min_standard_dev_of_numeric_atts ;
+                     skos:prefLabel "Minimum Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Naive_Bayes_Measurement
+:Naive_Bayes_Measurement rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:prefLabel "Naive Bayes Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Quantity_Measurement
+:Quantity_Measurement rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:narrower :equivalent_number_of_atts ,
+                                    :majority_class_size ,
+                                    :minortity_class_size ,
+                                    :number_of_binary_features ,
+                                    :number_of_classes ,
+                                    :number_of_features ,
+                                    :number_of_instances ,
+                                    :number_of_instances_with_missing_values ,
+                                    :number_of_missing_values ,
+                                    :number_of_numeric_features ,
+                                    :number_of_symbolic_features ;
+                      skos:prefLabel "Quantity Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Quartile_Measurement
+:Quartile_Measurement rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:prefLabel "Quartile Measurement" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/REP_Tree
+:REP_Tree rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:prefLabel "REP Tree" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Random_Tree
+:Random_Tree rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:prefLabel "Random Tree" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/Standard_Deviation
+:Standard_Deviation rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:prefLabel "Standard Deviation" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/auto_corellation
+:auto_corellation rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+		  skos:definition "Average class difference between consecutive instances.";
+                  skos:prefLabel "Auto Correlation" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subject_eval_decision_stump_error_rate
+:cfs_subject_eval_decision_stump_error_rate rdf:type owl:NamedIndividual ,
+                                                     skos:Concept ;
+                                            skos:broader :CFS_Subject_Eval_Decision_Stump ,
+                                                         :ErrorRateMeasurement ;
+					    skos:definition "Error rate achieved by the landmarker weka.classifiers.trees.DecisionStump -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                            skos:prefLabel "CFS Subject Eval Decision Stump error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subject_evaluation
+:cfs_subject_evaluation rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:narrower :CFS_Subject_Eval_Decision_Stump ,
+                                      :CFS_Subject_Eval_KNN1N ,
+                                      :CFS_Subject_Eval_Naive_Bayes ;
+                        skos:prefLabel "CFS Subject Evaluation" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subset_eval_decision_stump_auc
+:cfs_subset_eval_decision_stump_auc rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:broader :AreaUnderCurveMeasurement ,
+                                                 :CFS_Subject_Eval_Decision_Stump ;
+  				    skos:definition: "Area Under the ROC Curve achieved by the landmarker weka.classifiers.trees.DecisionStump -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                    skos:prefLabel "CFS Subject Eval Decision Stump area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subset_eval_decision_stump_kappa
+:cfs_subset_eval_decision_stump_kappa rdf:type owl:NamedIndividual ,
+                                               skos:Concept ;
+                                      skos:broader :CFS_Subject_Eval_Decision_Stump ,
+                                                   :KappaMeasurement ;
+				      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.trees.DecisionStump -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                      skos:prefLabel "CFS Subject Eval Decision Stump kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subset_eval_naive_bayes_auc
+:cfs_subset_eval_naive_bayes_auc rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :AreaUnderCurveMeasurement ,
+                                              :CFS_Subject_Eval_Naive_Bayes ;
+				 skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.bayes.NaiveBayes -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                 skos:prefLabel "CFS Subject Eval Naive Bayes area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subset_eval_naive_bayes_err_rate
+:cfs_subset_eval_naive_bayes_err_rate rdf:type owl:NamedIndividual ,
+                                               skos:Concept ;
+                                      skos:broader :CFS_Subject_Eval_Naive_Bayes ,
+                                                   :ErrorRateMeasurement ;
+				      skos:definition "Error rate achieved by the landmarker weka.classifiers.bayes.NaiveBayes -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                      skos:prefLabel "CFS Subject Eval Naive Bayes error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/cfs_subset_eval_naive_bayes_kappa
+:cfs_subset_eval_naive_bayes_kappa rdf:type owl:NamedIndividual ,
+                                            skos:Concept ;
+                                   skos:broader :CFS_Subject_Eval_Naive_Bayes ,
+                                                :KappaMeasurement ;
+				   skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.bayes.NaiveBayes -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                   skos:prefLabel "CFS Subject Eval Naive Bayes kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/csf_subject_eval_knn1n_auc
+:csf_subject_eval_knn1n_auc rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :AreaUnderCurveMeasurement ,
+                                         :CFS_Subject_Eval_KNN1N ;
+			    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.lazy.IBk -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                            skos:prefLabel "CFS Subject Eval KNN1N area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/csf_subject_eval_knn1n_err_rate
+:csf_subject_eval_knn1n_err_rate rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :CFS_Subject_Eval_KNN1N ,
+                                              :ErrorRateMeasurement ;
+				 skos:definition "Error rate achieved by the landmarker weka.classifiers.lazy.IBk -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                                 skos:prefLabel "CFS Subject Eval KNN1N error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/csf_subject_eval_knn1n_kappa
+:csf_subject_eval_knn1n_kappa rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :CFS_Subject_Eval_KNN1N ,
+                                           :KappaMeasurement ;
+			      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.lazy.IBk -E 'weka.attributeSelection.CfsSubsetEval -P 1 -E 1' -S 'weka.attributeSelection.BestFirst -D 1 -N 5' -W";
+                              skos:prefLabel "CFS Subject Eval KNN1N kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/decision_stump_auc
+:decision_stump_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :Decision_Stump ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.trees.DecisionStump";
+                    skos:prefLabel "Decision Stump area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/decision_stump_err_rate
+:decision_stump_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :Decision_Stump ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.trees.DecisionStump";
+                         skos:prefLabel "Decision Stump error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/decision_stump_kappa
+:decision_stump_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :Decision_Stump ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.trees.DecisionStump";
+                      skos:prefLabel "Decision Stump kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/equivalent_number_of_atts
+:equivalent_number_of_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quantity_Measurement ;
+			   skos:definition "Number of attributes needed to optimally describe the class (under the assumption of independence among attributes). Equals ClassEntropy divided by MeanMutualInformation.";
+                           skos:prefLabel "equivalent number of atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_00001_area_under_curve
+:j48_00001_area_under_curve rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:broader :J48AreaUnderCurve ;
+			     skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.trees.J48 -C .00001";
+                             skos:prefLabel "j48 00001 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_00001_error_rate
+:j48_00001_error_rate rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :J48ErrorRate ;
+		      skos:definition "Error rate achieved by the landmarker weka.classifiers.trees.J48 -C .00001";
+                      skos:prefLabel "j48 00001 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_00001_kappa
+:j48_00001_kappa rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:broader :J48Kappa ;
+		 skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.trees.J48 -C .00001";
+                 skos:prefLabel "j48 00001 kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_0001_area_under_curve
+:j48_0001_area_under_curve rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :J48AreaUnderCurve ;
+			    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.trees.J48 -C .0001";
+                            skos:prefLabel "j48 0001. area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_0001_error_rate
+:j48_0001_error_rate rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :J48ErrorRate ;
+		     skos:definition "Error rate achieved by the landmarker weka.classifiers.trees.J48 -C .0001";
+                     skos:prefLabel "j48 0001 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_0001_kappa
+:j48_0001_kappa rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:broader :J48Kappa ;
+		skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.trees.J48 -C .0001";
+                skos:prefLabel "j48 0001 kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_001_area_under_curve
+:j48_001_area_under_curve rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :J48AreaUnderCurve ;
+			   skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.trees.J48 -C .001";
+                           skos:prefLabel "j48 001. area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_001_error_rate
+:j48_001_error_rate rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :J48ErrorRate ;
+		    skos:definition "Error rate achieved by the landmarker weka.classifiers.trees.J48 -C .001";
+                    skos:prefLabel "j48 001 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/j48_001_kappa
+:j48_001_kappa rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:broader :J48Kappa ;
+	       skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.trees.J48 -C .001";
+               skos:prefLabel "j48 001 kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/knn1n_area_under_curve
+:knn1n_area_under_curve rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :AreaUnderCurveMeasurement ,
+                                     :KNN1N ;
+                        skos:prefLabel "knn1n area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/knn1n_error_rate
+:knn1n_error_rate rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:broader :ErrorRateMeasurement ,
+                               :KNN1N ;
+                  skos:prefLabel "knn1n error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/knn1n_kappa
+:knn1n_kappa rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:broader :KNN1N ,
+                          :KappaMeasurement ;
+             skos:prefLabel "knn1n kappa" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/majority_class_size
+:majority_class_size rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Quantity_Measurement ;
+		     skos:definition "Number of instances belonging to the most frequent class";
+                     skos:prefLabel "majority class size" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_kurtosis_of_numeric_atts
+:max_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Maximum_Measurement ;
+			      skos:definition "Maximum kurtosis among attributes of the numeric type.";
+                              skos:prefLabel "max kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_means_of_numeric_atts
+:max_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Maximum_Measurement ;
+			   skos:definition "Maximum of means among attributes of the numeric type.";
+                           skos:prefLabel "max means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_mutual_information
+:max_mutual_information rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Maximum_Measurement ;
+			skos:definition "Maximum mutual information between the nominal attributes and the target attribute.";
+                        skos:prefLabel "max mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_nominal_att_distinct_values
+:max_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Maximum_Measurement ;
+				 skos:definition "The maximum number of distinct values among attributes of the nominal type.";
+                                 skos:prefLabel "max nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_skewness_of_numeric_atts
+:max_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Maximum_Measurement ;
+			      skos:definition "Maximum skewness among attributes of the numeric type.";
+                              skos:prefLabel "max skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_standard_dev_of_numeric_atts
+:max_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Maximum_Measurement ;
+				  skos:definition "Maximum standard deviation of attributes of the numeric type.";
+                                  skos:prefLabel "max standard dev of numeric atts" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/max_attribute_entropy
+:max_attribute_entropy rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Entropy ,
+                                     :Max_Measurement ;
+		        skos:definition "Maximum entropy among attributes.";
+                        skos:prefLabel "max attribute entropy" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_attribute_entropy
+:mean_attribute_entropy rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Entropy ,
+                                     :Mean_Measurement ;
+			skos:definition "Average entropy among attributes.";
+                        skos:prefLabel "mean attribute entropy" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_kurtosis_of_numeric_atts
+:mean_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               skos:broader :Mean_Measurement ;
+			       skos:definition "Mean kurtosis among attributes of the numeric type.";
+                               skos:prefLabel "mean kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_means_of_numeric_atts
+:mean_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :Mean_Measurement ;
+			    skos:definition "Mean of means among attributes of the numeric type.";
+                            skos:prefLabel "mean means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_mutual_information
+:mean_mutual_information rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :Mean_Measurement ;
+			 skos:definition "Average mutual information between the nominal attributes and the target attribute.";
+                         skos:prefLabel "mean mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_noise_to_signal_ratio
+:mean_noise_to_signal_ratio rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :Mean_Measurement ;
+			    skos:definition "An estimate of the amount of irrelevant information in the attributes regarding the class. Equals (MeanAttributeEntropy - MeanMutualInformation) divided by MeanMutualInformation.";
+                            skos:prefLabel "mean noise to signal ratio" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_nominal_att_distinct_values
+:mean_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Mean_Measurement ;
+				  skos:definition "Average number of distinct values among the attributes of the nominal type.";
+                                  skos:prefLabel "mean nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_skewness_of_numeric_atts
+:mean_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               skos:broader :Mean_Measurement ;
+			       skos:definition "Mean skewness among attributes of the numeric type.";
+                               skos:prefLabel "mean skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/mean_standard_dev_of_numeric_atts
+:mean_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                            skos:Concept ;
+                                   skos:broader :Mean_Measurement ;
+				   skos:definition "Mean standard deviation of attributes of the numeric type.";
+                                   skos:prefLabel "mean standard dev of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_kurtosis_of_numeric_atts
+:min_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Minimum_Measurement ;
+			      skos:definition "Minimum kurtosis among attributes of the numeric type.";
+                              skos:prefLabel "min kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_means_of_numeric_atts
+:min_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Minimum_Measurement ;
+			   skos:definition "Minimum of means among attributes of the numeric type.";
+                           skos:prefLabel "min means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_mutual_information
+:min_mutual_information rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Minimum_Measurement ;
+		        skos:definition "Minimal mutual information between the nominal attributes and the target attribute.";
+                        skos:prefLabel "min mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_nominal_att_distinct_values
+:min_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Minimum_Measurement ;
+				 skos:definition "The minimal number of distinct values among attributes of the nominal type.";
+                                 skos:prefLabel "min nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_skewness_of_numeric_atts
+:min_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Minimum_Measurement ;
+			      skos:definition "Minimum skewness among attributes of the numeric type.";
+                              skos:prefLabel "min skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/min_standard_dev_of_numeric_atts
+:min_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Minimum_Measurement ;
+				  skos:definition "Minimum standard deviation of attributes of the numeric type.";
+                                  skos:prefLabel "min standard dev of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/minortity_class_size
+:minortity_class_size rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :Quantity_Measurement ;
+		      skos:definition "Number of instances belonging to the least frequent class.";
+                      skos:prefLabel "minortity class size" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_binary_features
+:number_of_binary_features rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quantity_Measurement ;
+			   skos:definition "Number of binary attributes.";
+                           skos:prefLabel "number of binary features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_classes
+:number_of_classes rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:broader :Quantity_Measurement ;
+		   skos:definition "Number of distinct values of the target attribute (if it is nominal).";
+                   skos:prefLabel "number of classes" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_features
+:number_of_features rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :Quantity_Measurement ;
+		    skos:definition "Number of attributes (columns) of the dataset.";
+                    skos:prefLabel "number of features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_instances
+:number_of_instances rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Quantity_Measurement ;
+		     skos:definition "Number of instances (rows) of the dataset.";
+                     skos:prefLabel "number of instances" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_instances_with_missing_values
+:number_of_instances_with_missing_values rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ;
+                                         skos:broader :Quantity_Measurement ;
+					 skos:definition "Number of instances with at least one value missing.";
+                                         skos:prefLabel "number of instances with missing values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_missing_values
+:number_of_missing_values rdf:type owl:NamedIndividual ,
+                                   skos:Concept ;
+                          skos:broader :Quantity_Measurement ;
+			  skos:definition "Number of missing values in the dataset.";
+                          skos:prefLabel "number of missing values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_numeric_features
+:number_of_numeric_features rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :Quantity_Measurement ;
+			    skos:definition "Number of numeric attributes.";
+                            skos:prefLabel "number of numeric features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/number_of_symbolic_features
+:number_of_symbolic_features rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:broader :Quantity_Measurement ;
+			     skos:definition "Number of nominal attributes.";
+                             skos:prefLabel "number of symbolic features" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_binary_features
+:percentage_of_binary_features rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quantity_Measurement ;
+			   skos:definition "Percentage of binary attributes.";
+                           skos:prefLabel "Percentage of binary features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_classes
+:percentage_of_classes rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:broader :Quantity_Measurement ;
+		   skos:definition "Percentage of distinct values of the target attribute (if it is nominal).";
+                   skos:prefLabel "Percentage of classes" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_features
+:percentage_of_features rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :Quantity_Measurement ;
+		    skos:definition "Percentage of attributes (columns) of the dataset.";
+                    skos:prefLabel "Percentage of features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_instances
+:percentage_of_instances rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Quantity_Measurement ;
+		     skos:definition "Percentage of instances (rows) of the dataset.";
+                     skos:prefLabel "Percentage of instances" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_instances_with_missing_values
+:percentage_of_instances_with_missing_values rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ;
+                                         skos:broader :Quantity_Measurement ;
+					 skos:definition "Percentage of instances with at least one value missing.";
+                                         skos:prefLabel "Percentage of instances with missing values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_missing_values
+:percentage_of_missing_values rdf:type owl:NamedIndividual ,
+                                   skos:Concept ;
+                          skos:broader :Quantity_Measurement ;
+			  skos:definition "Percentage of missing values in the dataset.";
+                          skos:prefLabel "Percentage of missing values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_numeric_features
+:percentage_of_numeric_features rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :Quantity_Measurement ;
+			    skos:definition "Percentage of numeric attributes.";
+                            skos:prefLabel "Percentage of numeric features" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/percentage_of_symbolic_features
+:percentage_of_symbolic_features rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:broader :Quantity_Measurement ;
+			     skos:definition "Percentage of nominal attributes.";
+                             skos:prefLabel "Percentage of symbolic features" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_kurtosis_of_numeric_atts
+:quartile1_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "First Quartile kurtosis among attributes of the numeric type.";
+                              skos:prefLabel "First Quartile kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_means_of_numeric_atts
+:quartile1_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quartile_Measurement ;
+			   skos:definition "First Quartile of means among attributes of the numeric type.";
+                           skos:prefLabel "First Quartile means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_mutual_information
+:quartile1_mutual_information rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Quartile_Measurement ;
+		        skos:definition "First Quartile mutual information between the nominal attributes and the target attribute.";
+                        skos:prefLabel "First Quartile mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_nominal_att_distinct_values
+:quartile1_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Quartile_Measurement ;
+				 skos:definition "First Quartile number of distinct values among attributes of the nominal type.";
+                                 skos:prefLabel "First Quartile nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_skewness_of_numeric_atts
+:quartile1_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "First Quartile skewness among attributes of the numeric type.";
+                              skos:prefLabel "First Quartile skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile1_standard_dev_of_numeric_atts
+:quartile1_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Quartile_Measurement ;
+				  skos:definition "First Quartile standard deviation of attributes of the numeric type.";
+                                  skos:prefLabel "First Quartile standard dev of numeric atts" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_kurtosis_of_numeric_atts
+:quartile2_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "Second Quartile kurtosis among attributes of the numeric type.";
+                              skos:prefLabel "Second Quartile kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_means_of_numeric_atts
+:quartile2_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quartile_Measurement ;
+			   skos:definition "Second Quartile of means among attributes of the numeric type.";
+                           skos:prefLabel "Second Quartile means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_mutual_information
+:quartile2_mutual_information rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Quartile_Measurement ;
+		        skos:definition "Second Quartile mutual information between the nominal attributes and the target attribute.";
+                        skos:prefLabel "Second Quartile mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_nominal_att_distinct_values
+:quartile2_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Quartile_Measurement ;
+				 skos:definition "Second Quartile number of distinct values among attributes of the nominal type.";
+                                 skos:prefLabel "Second Quartile nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_skewness_of_numeric_atts
+:quartile2_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "Second Quartile skewness among attributes of the numeric type.";
+                              skos:prefLabel "Second Quartile skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile2_standard_dev_of_numeric_atts
+:quartile2_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Quartile_Measurement ;
+				  skos:definition "Second Quartile standard deviation of attributes of the numeric type.";
+                                  skos:prefLabel "Second Quartile standard dev of numeric atts" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_kurtosis_of_numeric_atts
+:quartile3_kurtosis_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "Third Quartile kurtosis among attributes of the numeric type.";
+                              skos:prefLabel "Third Quartile kurtosis of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_means_of_numeric_atts
+:quartile3_means_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :Quartile_Measurement ;
+			   skos:definition "Third Quartile of means among attributes of the numeric type.";
+                           skos:prefLabel "Third Quartile means of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_mutual_information
+:quartile3_mutual_information rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Quartile_Measurement ;
+		        skos:definition "Third Quartile mutual information between the nominal attributes and the target attribute.";
+                        skos:prefLabel "Third Quartile mutual information" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_nominal_att_distinct_values
+:quartile3_nominal_att_distinct_values rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Quartile_Measurement ;
+				 skos:definition "Third Quartile number of distinct values among attributes of the nominal type.";
+                                 skos:prefLabel "Third Quartile nominal att distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_skewness_of_numeric_atts
+:quartile3_skewness_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Quartile_Measurement ;
+			      skos:definition "Third Quartile skewness among attributes of the numeric type.";
+                              skos:prefLabel "Third Quartile skewness of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/quartile3_standard_dev_of_numeric_atts
+:quartile3_standard_dev_of_numeric_atts rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :Quartile_Measurement ;
+				  skos:definition "Third Quartile standard deviation of attributes of the numeric type.";
+                                  skos:prefLabel "Third Quartile standard dev of numeric atts" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth1_auc
+:rep_tree_depth1_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :REP_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -L 1";
+                    skos:prefLabel "REP Tree 1 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth1_err_rate
+:rep_tree_depth1_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :REP_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -L 1";
+                         skos:prefLabel "REP Tree 1 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth1_kappa
+:rep_tree_depth1_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :REP_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -L 1";
+                      skos:prefLabel "REP Tree 1 kappa" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth2_auc
+:rep_tree_depth2_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :REP_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -L 2";
+                    skos:prefLabel "REP Tree 2 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth2_err_rate
+:rep_tree_depth2_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :REP_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -L 2";
+                         skos:prefLabel "REP Tree 2 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth2_kappa
+:rep_tree_depth2_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :REP_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -L 2";
+                      skos:prefLabel "REP Tree 2 kappa" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth3_auc
+:rep_tree_depth3_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :REP_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -L 3";
+                    skos:prefLabel "REP Tree 3 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth3_err_rate
+:rep_tree_depth3_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :REP_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -L 3";
+                         skos:prefLabel "REP Tree 3 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/rep_tree_depth3_kappa
+:rep_tree_depth3_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :REP_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -L 3";
+                      skos:prefLabel "REP Tree 3 kappa" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth3_auc
+:random_tree_depth3_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :Random_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -depth 3";
+                    skos:prefLabel "Random Tree 3 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth3_err_rate
+:random_tree_depth3_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :Random_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -depth 3";
+                         skos:prefLabel "Random Tree 3 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth3_kappa
+:random_tree_depth3_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :Random_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -depth 3";
+                      skos:prefLabel "Random Tree 3 kappa" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth2_auc
+:random_tree_depth2_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :Random_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -depth 2";
+                    skos:prefLabel "Random Tree 2 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth2_err_rate
+:random_tree_depth2_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :Random_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -depth 2";
+                         skos:prefLabel "Random Tree 2 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth2_kappa
+:random_tree_depth2_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :Random_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -depth 2";
+                      skos:prefLabel "Random Tree 2 kappa" .
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth1_auc
+:random_tree_depth1_auc rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :AreaUnderCurveMeasurement ,
+                                 :Random_Tree ;
+		    skos:definition "Area Under the ROC Curve achieved by the landmarker weka.classifiers.treesREPTree -depth 1";
+                    skos:prefLabel "Random Tree 1 area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth1_err_rate
+:random_tree_depth1_err_rate rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :Random_Tree ,
+                                      :ErrorRateMeasurement ;
+			 skos:definition "Error rate achieved by the landmarker weka.classifiers.treesREPTree -depth 1";
+                         skos:prefLabel "Random Tree 1 error rate" .
+
+
+###  http://w3id.org/mlso/vocab/dataset_characteristic/random_tree_depth1_kappa
+:random_tree_depth1_kappa rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :Random_Tree ,
+                                   :KappaMeasurement ;
+		      skos:definition "Kappa coefficient achieved by the landmarker weka.classifiers.treesREPTree -depth 1";
+                      skos:prefLabel "Random Tree 1 kappa" .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

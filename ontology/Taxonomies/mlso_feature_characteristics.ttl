@@ -1,0 +1,488 @@
+@prefix : <http://w3id.org/mlso/vocab/feature_characteristic/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/feature_characteristic> .
+
+<http://w3id.org/mlso/vocab/feature_characteristic> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/FeatureCharacteristic
+:FeatureCharacteristic rdf:type owl:NamedIndividual ,
+                                skos:Collection ;
+                       skos:definition :average_class_count ,
+                                       :average_percentage_of_class ,
+                                       :chi_square_uniform_distribution ,
+                                       :covariance_with_target ,
+                                       :entropy ,
+                                       :has_negative_values ,
+                                       :has_positive_values ,
+                                       :higher_confidence ,
+                                       :higher_outer_fence ,
+                                       :higher_quartile ,
+                                       :integers_only ,
+                                       :is_uniform ,
+                                       :kurtosis ,
+                                       :least_frequent_class_count ,
+                                       :lower_confidence ,
+                                       :lower_outer_fence ,
+                                       :lower_quartile ,
+                                       :majority_class_size ,
+                                       :median_class_count ,
+                                       :median_class_percentage ,
+                                       :median_value ,
+                                       :minority_class_size ,
+                                       :missing_values ,
+                                       :mode ,
+                                       :mode_class_count ,
+                                       :mode_class_percentage ,
+                                       :most_frequent_class_count ,
+                                       :negative_count ,
+                                       :negative_perventage ,
+                                       :number_of_non-missing_values ,
+                                       :pearson_correllation_coefficient ,
+                                       :percentage_of_least_frequent_class ,
+                                       :percentage_of_missing_values ,
+                                       :percentage_of_most_frequent_class ,
+                                       :percentage_of_non-missing_values ,
+                                       :positive_count ,
+                                       :positive_percentage ,
+                                       :ration_of_distinguishing_categories ,
+                                       :ration_of_distinguishing_categories_by_utest ,
+                                       :skewness ,
+                                       :standard_deviation ,
+                                       :uniform_discrete ,
+                                       :value_range ,
+                                       :variance ;
+                       skos:member :datatype ,
+                                   :majority_class_size ,
+                                   :max_value ,
+                                   :mean_value ,
+                                   :min_value ,
+                                   :minority_class_size ,
+                                   :number_of_classes ,
+                                   :number_of_distinct_values ,
+                                   :number_of_instances ,
+                                   :number_of_missing_values ,
+                                   :number_of_numeric_features ,
+                                   :standard_deviation ;
+                       skos:prefLabel "Feature Characteristic" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/average_class_count
+:average_class_count rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Any Attribute Type) Average count of occurrences of the distinct attribute values." ;
+                     skos:prefLabel "average class count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/average_percentage_of_class
+:average_percentage_of_class rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:definition "(Any Attribute Type) Average occurrence rate of the distinct attribute values." ;
+                             skos:prefLabel "average percentage of class" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/chi_square_uniform_distribution
+:chi_square_uniform_distribution rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:definition "(Nominal Attribute Type) Statistic value of the chi-squared test for H0 (the attribute distribution is a uniform discrete distribution) ." ;
+                                 skos:prefLabel "chi square uniform distribution" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/covariance_with_target
+:covariance_with_target rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:definition "(Any Attribute Type) Covariance between the attribute values and the target attribute." ;
+                        skos:prefLabel "covariance with target" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/datatype
+:datatype rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:prefLabel "data-type" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/entropy
+:entropy rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:definition "(Any Attribute Type) Entropy of the attribute values." ;
+         skos:prefLabel "entropy" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/has_negative_values
+:has_negative_values rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Numerical Attribute Only) 1 if the attribute has at least one strictly negative value, 0 otherwise." ;
+                     skos:prefLabel "has negative values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/has_positive_values
+:has_positive_values rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Numerical Attribute Only) 1 if the attribute has at least one positive value, 0 otherwise." ;
+                     skos:prefLabel "has positive values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/higher_confidence
+:higher_confidence rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "(Numerical Attribute Only) Higher confidence interval (for the 95% confidence level) of the attribute values." ;
+                   skos:prefLabel "higher confidence" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/higher_outer_fence
+:higher_outer_fence rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "(Numerical Attribute Only) Higher outer fence of the attribute values. Values beyond are strong outliers." ;
+                    skos:prefLabel "higher outer fence" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/higher_quartile
+:higher_quartile rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "(Numerical Attribute Only) Higher quartile (75th percentile) of the attribute values." ;
+                 skos:prefLabel "higher quartile" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/integers_only
+:integers_only rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:definition "(Numerical Attribute Only) 1 if attribute values consist exclusively of integers, 0 otherwise." ;
+               skos:prefLabel "integers only" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/is_uniform
+:is_uniform rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:definition "(Numerical Attribute Only) 0 if the Kolmogorov-Smirnov test rejects H0 (the attribute distribution is a uniform distribution) at the 0.05 significance level, 1 otherwise." ;
+            skos:prefLabel "is uniform" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/kurtosis
+:kurtosis rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "(Numerical Attribute Only) Kurtosis of the attribute values." ;
+          skos:prefLabel "kurtosis" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/least_frequent_class_count
+:least_frequent_class_count rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:definition "(Any Attribute Type) Count of the least occuring attribute value." ;
+                            skos:prefLabel "least frequent class count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/lower_confidence
+:lower_confidence rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "(Numerical Attribute Only) Lower confidence interval (for the 95% confidence level) of the attribute values." ;
+                  skos:prefLabel "lower confidence" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/lower_outer_fence
+:lower_outer_fence rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:definition "(Numerical Attribute Only) Lower outer fence of the attribute values. Values beyond are strong outliers." ;
+                   skos:prefLabel "lower outer fence" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/lower_quartile
+:lower_quartile rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "(Numerical Attribute Only) Lower quartile (25th percentile) of the attribute values." ;
+                skos:prefLabel "lower quartile" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/majority_class_size
+:majority_class_size rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:prefLabel "majority class size" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/max_value
+:max_value rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:definition "(Numerical Attribute Only) Maximum of the attribute values." ;
+           skos:prefLabel "max value" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/mean_value
+:mean_value rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:definition "(Numerical Attribute Only) Average of the attribute values." ;
+            skos:prefLabel "mean value" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/median_class_count
+:median_class_count rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "(Any Attribute Type) Median count of occurrences of the distinct attribute values." ;
+                    skos:prefLabel "median class count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/median_class_percentage
+:median_class_percentage rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:definition "(Any Attribute Type) Median occurrence rate of the distinct attribute values." ;
+                         skos:prefLabel "median class percentage" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/median_value
+:median_value rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:definition "(Numerical Attribute Only) Median of the attribute values." ;
+              skos:prefLabel "median value" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/min_value
+:min_value rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:definition "(Numerical Attribute Only) Minimum of the attribute values." ;
+           skos:prefLabel "min value" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/minority_class_size
+:minority_class_size rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:prefLabel "minority class size" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/missing_values
+:missing_values rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "(Any Attribute Type) 1 if the attribute has at least one missing value, 0 otherwise." ;
+                skos:prefLabel "missing values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/mode
+:mode rdf:type owl:NamedIndividual ,
+               skos:Concept ;
+      skos:definition "(Numerical Attribute Only) Mode of the attribute values." ;
+      skos:prefLabel "mode" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/mode_class_count
+:mode_class_count rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "(Any Attribute Type) Most frequent count of occurrences of the distinct attribute values." ;
+                  skos:prefLabel "mode class count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/mode_class_percentage
+:mode_class_percentage rdf:type owl:NamedIndividual ,
+                                skos:Concept ;
+                       skos:definition "(Any Attribute Type) Most frequent occurrence rate of the distinct attribute values." ;
+                       skos:prefLabel "mode class percentage" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/most_frequent_class_count
+:most_frequent_class_count rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:definition "(Any Attribute Type) Count of the most occuring attribute value." ;
+                           skos:prefLabel "most frequent class count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/negative_count
+:negative_count rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "(Numerical Attribute Only) Number of stricly negative attribute values." ;
+                skos:prefLabel "negative count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/negative_perventage
+:negative_perventage rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Numerical Attribute Only) Percentage of strictly negative attribute values." ;
+                     skos:prefLabel "negative perventage" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_binary_features
+:number_of_binary_features rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:prefLabel "number of binary features" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_classes
+:number_of_classes rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:prefLabel "number of classes" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_distinct_values
+:number_of_distinct_values rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:definition "(Any Attribute Type) Number of distinct attribute values." ;
+                           skos:prefLabel "number of distinct values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_instances
+:number_of_instances rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Any Attribute Type) Total number of values. Equivalent to the number of instances in the dataset." ;
+                     skos:prefLabel "number of instances" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_missing_values
+:number_of_missing_values rdf:type owl:NamedIndividual ,
+                                   skos:Concept ;
+                          skos:definition "(Any Attribute Type) 1 if the attribute has at least one missing value, 0 otherwise." ;
+                          skos:prefLabel "number of missing values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_non-missing_values
+:number_of_non-missing_values rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:definition "(Any Attribute Type) Number of non missing values." ;
+                              skos:prefLabel "number of non-missing values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_numeric_features
+:number_of_numeric_features rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:prefLabel "number of numeric features" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/number_of_symbolic_features
+:number_of_symbolic_features rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:prefLabel "number of symbolic features" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/pearson_correllation_coefficient
+:pearson_correllation_coefficient rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:definition "(Any Attribute Type) Pearson Correlation Coeficient between the attribute values and the target attribute." ;
+                                  skos:prefLabel "pearson correllation coefficient" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/percentage_of_least_frequent_class
+:percentage_of_least_frequent_class rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:definition "(Any Attribute Type) Occurrence rate of the least frequent attribute value." ;
+                                    skos:prefLabel "percentage of least frequent class" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/percentage_of_missing_values
+:percentage_of_missing_values rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:definition "(Any Attribute Type) Percentage of missing attribute values." ;
+                              skos:prefLabel "percentage of missing values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/percentage_of_most_frequent_class
+:percentage_of_most_frequent_class rdf:type owl:NamedIndividual ,
+                                            skos:Concept ;
+                                   skos:definition "(Any Attribute Type) Occurrence rate of the most frequent attribute value." ;
+                                   skos:prefLabel "percentage of most frequent class" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/percentage_of_non-missing_values
+:percentage_of_non-missing_values rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:definition "(Any Attribute Type) Percentage of non-missing attribute values." ;
+                                  skos:prefLabel "percentage of non-missing values" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/positive_count
+:positive_count rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "(Numerical Attribute Only) Number of positive attribute values." ;
+                skos:prefLabel "positive count" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/positive_percentage
+:positive_percentage rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:definition "(Numerical Attribute Only) Percentage of positive attribute values." ;
+                     skos:prefLabel "positive percentage" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/ration_of_distinguishing_categories
+:ration_of_distinguishing_categories rdf:type owl:NamedIndividual ,
+                                              skos:Concept ;
+                                     skos:definition "(Nominal Attribute Type) Ratio of attribute values that after sub-setting the dataset to that attribute value lead to different distribution of the target as indicated by the Kolmogorov-Smirnoff statistical test." ;
+                                     skos:prefLabel "ration of distinguishing categories" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/ration_of_distinguishing_categories_by_utest
+:ration_of_distinguishing_categories_by_utest rdf:type owl:NamedIndividual ,
+                                                       skos:Concept ;
+                                              skos:definition "(Nominal Attribute Type) Ratio of attribute values that after sub-setting the dataset to that attribute value lead to different distribution of the target as indicated by the Mann-Whitney U-test." ;
+                                              skos:prefLabel "ration of distinguishing categories by utest" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/skewness
+:skewness rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "(Numerical Attribute Only) Skewness of the attribute values." ;
+          skos:prefLabel "skewness" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/standard_deviation
+:standard_deviation rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "(Numerical Attribute Only) Standard deviation of the attribute values." ;
+                    skos:prefLabel "standard deviation" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/uniform_discrete
+:uniform_discrete rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "(Nominal Attribute Type) 0 if the chi-squared test rejects H0 (the attribute distribution is a uniform discrete distribution) at the 0.05 significance level, 1 otherwise." ;
+                  skos:prefLabel "uniform discrete" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/value_range
+:value_range rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:definition "(Numerical Attribute Only) Difference between maximum and minimum of the attribute values." ;
+             skos:prefLabel "value range" .
+
+
+###  http://w3id.org/mlso/vocab/feature_characteristic/variance
+:variance rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "(Numerical Attribute Only) Variance of the attribute values." ;
+          skos:prefLabel "variance" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

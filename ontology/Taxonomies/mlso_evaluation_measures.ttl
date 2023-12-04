@@ -1,0 +1,775 @@
+@prefix : <http://w3id.org/mlso/vocab/evaluation_measure/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/mlso/vocab/evaluation_measure> .
+
+<http://w3id.org/mlso/vocab/evaluation_measure> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Area_Under_Curve_Evaluation_Metric
+:Area_Under_Curve_Evaluation_Metric rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:narrower :area_under_curve ,
+                                                  :mean_weighted_area_under_ROC_curve ,
+                                                  :single_point_area_under_ROC_curve ;
+                                    skos:prefLabel "Area Under Curve Evaluation Metric" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Complexity
+:Complexity rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:narrower :class_complexity ,
+                          :class_complexity_gain ,
+                          :mean_class_complexity ,
+                          :mean_class_complexity_gain ,
+                          :mean_prior_class_complexity ,
+                          :prior_class_complexity ;
+            skos:prefLabel "Complexity" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Evaluation_Measure
+:Evaluation_Measure rdf:type owl:NamedIndividual ,
+                             skos:Collection ;
+                    skos:member :Area_Under_Curve_Evaluation_Metric ,
+                                :Complexity ,
+                                :Execution ,
+                                :Kohavi_Wolpert_Decomposition ,
+                                :Kononenko_Branko_Score ,
+                                :accuracy ,
+                                :bias ,
+                                :binomial_test ,
+                                :c_index ,
+                                :chi_squared ,
+                                :class_distribution_entropy ,
+                                :correlation_coefficient ,
+                                :cortana_quality ,
+                                :cost ,
+                                :coverage ,
+                                :error ,
+                                :f_measure ,
+                                :information_gain ,
+                                :jaccard ,
+                                :kappa ,
+                                :os_information ,
+                                :positives ,
+                                :precision ,
+                                :prediction_confusion_matrix ,
+                                :probability ,
+                                :quality ,
+                                :recall ,
+                                :schimark_benchmark ,
+                                :unclassified_instance_count ,
+                                :variance ;
+                    skos:prefLabel "Evaluation Measure" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Execution
+:Execution rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:narrower :build_cpu_time ,
+                         :build_memory ,
+                         :ram_hours ,
+                         :run_cpu_time ,
+                         :run_memory ,
+                         :run_virtual_memory ,
+                         :usercpu_time_millis ,
+                         :usercpu_time_millis_training ,
+                         :wall_clock_time_millis ,
+                         :wall_clock_time_millis_testing ,
+                         :wall_clock_time_millis_training ;
+           skos:prefLabel "Execution metric" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Kohavi_Wolpert_Decomposition
+:Kohavi_Wolpert_Decomposition rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:narrower :kohavi_wolpert_decomposition_bias_squared ,
+                                            :kohavi_wolpert_decomposition_error ,
+                                            :kohavi_wolpert_decomposition_sigma_squared ,
+                                            :kohavi_wolpert_decomposition_variance ;
+                              skos:prefLabel "Kohavi Wolpert Decomposition" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/Kononenko_Branko_Score
+:Kononenko_Branko_Score rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:narrower :kononenko_branko_information_score ,
+                                      :kononenko_branko_relative_information_score ,
+                                      :mean_kononenko_branko_information_score ;
+                        skos:prefLabel "Kononenko Branko Score" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/accuracy
+:accuracy rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "The Predictive Accuracy is the percentage of instances that are classified correctly. It is 1 - ErrorRate." ;
+          skos:prefLabel "accuracy" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/area_under_curve
+:area_under_curve rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:broader :Area_Under_Curve_Evaluation_Metric ;
+                  skos:definition "The area under the ROC curve (AUROC), calculated using the Mann-Whitney U-test. The curve is constructed by shifting the threshold for a positive prediction from 0 to 1, yielding a series of true positive rates (TPR) and false positive rates (FPR), from which a step-wise ROC curve can be constructed. See http://en.wikipedia.org/wiki/Receiver_operating_characteristic. Note that this is different from the Area Under the ROC Convex Hull (ROC AUCH). AUROC is defined only for a specific class value, and should thus be labeled with the class value for which is was computed. Use the mean_weighted_area_under_roc_curve for the weighted average over all class values." ;
+                  skos:prefLabel "area under curve" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/average_cost
+:average_cost rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:broader :cost ;
+              skos:prefLabel "average cost" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/bias
+:bias rdf:type owl:NamedIndividual ,
+               skos:Concept ;
+      skos:narrower :webb_bias ;
+      skos:prefLabel "bias" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/binomial_test
+:binomial_test rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:definition "Subgroup discovery measure." ;
+               skos:prefLabel "binomial test" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/build_cpu_time
+:build_cpu_time rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:broader :Execution ;
+                skos:definition "The time in seconds to build a single model on all data." ;
+                skos:prefLabel "build cpu time" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/build_memory
+:build_memory rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:broader :Execution ;
+              skos:definition "The memory, in bytes, needed to build a single model on all data." ;
+              skos:prefLabel "build memory" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/c_index
+:c_index rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:definition "Used for survival Analysis" ;
+         skos:prefLabel "c index" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/chi_squared
+:chi_squared rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:definition "Subgroup discovery measure." ;
+             skos:prefLabel "chi squared" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/class_complexity
+:class_complexity rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:broader :Complexity ;
+                  skos:definition "Entropy, in bits, of the class distribution generated by the model's predictions. Calculated by taking the sum of -log2(predictedProb) over all instances, where predictedProb is the probability (according to the model) of the actual class for that instance. If instances are weighted, the weighted sum is taken." ;
+                  skos:prefLabel "class complexity" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/class_complexity_gain
+:class_complexity_gain rdf:type owl:NamedIndividual ,
+                                skos:Concept ;
+                       skos:broader :Complexity ;
+                       skos:definition "Entropy reduction, in bits, between the class distribution generated by the model's predictions, and the prior class distribution. Calculated by taking the difference of the prior_class_complexity and the class_complexity." ;
+                       skos:prefLabel "class complexity gain" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/class_distribution_entropy
+:class_distribution_entropy rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:narrower :joint_entropy ,
+                                          :prior_entropy ;
+                            skos:prefLabel "class distribution entropy" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/correlation_coefficient
+:correlation_coefficient rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:definition "The sample Pearson correlation coefficient, or 'r': <math>r = frac{ sum ^n _{i=1}(X_i - bar{X})(Y_i - bar{Y})}{ sqrt{ sum ^n _{i=1}(X_i - bar{X})^2} sqrt{ sum ^n _{i=1}(Y_i - bar{Y})^2}}</math> It measures the correlation (linear dependence) between the actual predictions and the model's predictions, giving a value between +1 and ?1 inclusive. See: http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient', 'WEKA's Evaluation.correlationCoefficient() /** * Returns the correlation coefficient if the class is numeric. * * @return the correlation coefficient * @throws Exception if class is not numeric */ public final double correlationCoefficient() throws Exception { if (m_ClassIsNominal) { throw new Exception('Can't compute correlation coefficient: ' + 'class is nominal!'); } double correlation = 0; double varActual = m_SumSqrClass - m_SumClass * m_SumClass / (m_WithClass - m_Unclassified); double varPredicted = m_SumSqrPredicted - m_SumPredicted * m_SumPredicted / (m_WithClass - m_Unclassified); double varProd = m_SumClassPredicted - m_SumClass * m_SumPredicted / (m_WithClass - m_Unclassified); if (varActual * varPredicted <= 0) { correlation = 0.0; } else { correlation = varProd / Math.sqrt(varActual * varPredicted); } return correlation; }" ;
+                         skos:narrower :matthews_correlation_coefficient ,
+                                       :pearson_correlation_coefficient ;
+                         skos:prefLabel "correlation coefficient" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/cortana_quality
+:cortana_quality rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 skos:definition "Subgroup discovery measure." ;
+                 skos:prefLabel "cortana quality" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/cost
+:cost rdf:type owl:NamedIndividual ,
+               skos:Concept ;
+      skos:narrower :average_cost ,
+                    :total_cost ;
+      skos:prefLabel "cost" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/coverage
+:coverage rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:definition "The number of observations in the current subgroup." ;
+          skos:prefLabel "coverage" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/error
+:error rdf:type owl:NamedIndividual ,
+                skos:Concept ;
+       skos:narrower :mean_absolute_error ,
+                     :mean_prior_absolute_error ,
+                     :relative_absolute_error ,
+                     :root_mean_prior_squared_error ,
+                     :root_mean_squared_error ,
+                     :root_relative_squared_error ,
+                     :webb_error ;
+       skos:prefLabel "error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/f_measure
+:f_measure rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:definition "The F-Measure is the harmonic mean of precision and recall, also known as the the traditional F-measure, balanced F-score, or F1-score: Formula: 2*Precision*Recall/(Precision+Recall) See: http://en.wikipedia.org/wiki/Precision_and_recall F-measure is defined only for a specific class value, and should thus be labeled with the class value for which is was computed. Use the mean_weighted_f_measure for the weighted average over all class values.', 'WEKA's Evaluation.fMeasure(int classIndex): /** * Calculate the F-Measure with respect to a particular class. * This is defined as<p/> * <pre> * 2 * recall * precision * ---------------------- * recall + precision * </pre> * * @param classIndex the index of the class to consider as 'positive' * @return the F-Measure */ public double fMeasure(int classIndex) { double precision = precision(classIndex); double recall = recall(classIndex); if ((precision + recall) == 0) { return 0; } return 2 * precision * recall / (precision + recall); }" ;
+           skos:narrower :mean_f_measure ,
+                         :mean_unweighted_f_measure ,
+                         :mean_weighted_f_measure ;
+           skos:prefLabel "f measure" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/information_gain
+:information_gain rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:definition "Subgroup discovery measure." ;
+                  skos:prefLabel "information gain" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/jaccard
+:jaccard rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:definition "Subgroup discovery measure." ;
+         skos:prefLabel "jaccard" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/joint_entropy
+:joint_entropy rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:broader :class_distribution_entropy ;
+               skos:definition "Subgroup discovery measure." ;
+               skos:prefLabel "joint entropy" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kappa
+:kappa rdf:type owl:NamedIndividual ,
+                skos:Concept ;
+       skos:definition "Cohen's kappa coefficient is a statistical measure of agreement for qualitative (categorical) items: it measures the agreement of prediction with the true class – 1.0 signifies complete agreement. It is generally thought to be a more robust measure than simple percent agreement calculation since kappa takes into account the agreement occurring by chance. However, some researchers have expressed concern over kappa's tendency to take the observed categories' frequencies as givens, which can have the effect of underestimating agreement for a category that is also commonly used; for this reason, kappa is considered an overly conservative measure of agreement. The equation for kappa is: <math> kappa = frac{ Pr(a) - Pr(e)}{1 - Pr(e)}, !</math> where Pr(a) is the relative observed agreement among raters, and Pr(e) is the hypothetical probability of chance agreement, using the observed data to calculate the probabilities of each observer randomly saying each category. If the raters are in complete agreement then kappa = 1. If there is no agreement among the raters other than what would be expected by chance (as defined by Pr(e)), kappa = 0. See: Cohen, Jacob (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement 20 (1): 37–46.', 'WEKA's Evaluation.kappa(), based on the confusion matrix. public final double kappa() { double[] sumRows = new double[m_ConfusionMatrix.length]; double[] sumColumns = new double[m_ConfusionMatrix.length]; double sumOfWeights = 0; for (int i = 0; i < m_ConfusionMatrix.length; i++) { for (int j = 0; j < m_ConfusionMatrix.length; j++) { sumRows[i] += m_ConfusionMatrix[i][j]; sumColumns[j] += m_ConfusionMatrix[i][j]; sumOfWeights += m_ConfusionMatrix[i][j]; } } double correct = 0, chanceAgreement = 0; for (int i = 0; i < m_ConfusionMatrix.length; i++) { chanceAgreement += (sumRows[i] * sumColumns[i]); correct += m_ConfusionMatrix[i][i]; } chanceAgreement /= (sumOfWeights * sumOfWeights); correct /= sumOfWeights; if (chanceAgreement < 1) { return (correct - chanceAgreement) / (1 - chanceAgreement); } else { return 1; } }" ;
+       skos:prefLabel "kappa" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kohavi_wolpert_decomposition_bias_squared
+:kohavi_wolpert_decomposition_bias_squared rdf:type owl:NamedIndividual ,
+                                                    skos:Concept ;
+                                           skos:broader :Kohavi_Wolpert_Decomposition ;
+                                           skos:definition "Bias component (squared) of the bias-variance decomposition as defined by Kohavi and Wolpert in: R. Kohavi & D. Wolpert (1996), Bias plus variance decomposition for zero-one loss functions, in Proc. of the Thirteenth International Machine Learning Conference (ICML96) This quantity measures how closely the learning algorithms average guess over all possible training sets of the given training set size matches the target. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia', 'See WEKA's BVDecompose class" ;
+                                           skos:prefLabel "kohavi wolpert decomposition bias squared" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kohavi_wolpert_decomposition_error
+:kohavi_wolpert_decomposition_error rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:broader :Kohavi_Wolpert_Decomposition ;
+                                    skos:definition "Error rate measured in the bias-variance decomposition as defined by Kohavi and Wolpert in: R. Kohavi & D. Wolpert (1996), Bias plus variance decomposition for zero-one loss functions, in Proc. of the Thirteenth International Machine Learning Conference (ICML96) Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+                                    skos:prefLabel "kohavi wolpert decomposition error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kohavi_wolpert_decomposition_sigma_squared
+:kohavi_wolpert_decomposition_sigma_squared rdf:type owl:NamedIndividual ,
+                                                     skos:Concept ;
+                                            skos:broader :Kohavi_Wolpert_Decomposition ;
+                                            skos:definition "Intrinsic error component (squared) of the bias-variance decomposition as defined by Kohavi and Wolpert in: R. Kohavi and D. Wolpert (1996), Bias plus variance decomposition for zero-one loss functions, in Proc. of the Thirteenth International Machine Learning Conference (ICML96) This quantity is a lower bound on the expected cost of any learning algo rithm. It is the expected cost of the Bayes optimal classifier. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+                                            skos:prefLabel "kohavi wolpert decomposition sigma squared" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kohavi_wolpert_decomposition_variance
+:kohavi_wolpert_decomposition_variance rdf:type owl:NamedIndividual ,
+                                                skos:Concept ;
+                                       skos:broader :Kohavi_Wolpert_Decomposition ;
+                                       skos:definition "Variance component of the bias-variance decomposition as defined by Kohavi and Wolpert in: R. Kohavi and D. Wolpert (1996), Bias plus variance decomposition for zero-one loss functions, in Proc. of the Thirteenth International Machine Learning Conference (ICML96) This quantity measures how much the learning algorithms guess 'bounces around' for the different training sets of the given size. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+                                       skos:prefLabel "kohavi wolpert decomposition variance" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kononenko_branko_information_score
+:kononenko_branko_information_score rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:broader :Kononenko_Branko_Score ;
+                                    skos:definition "Kononenko and Bratko Information score. This measures predictive accuracy but eliminates the influence of prior probabilities. See: Kononenko, I., Bratko, I.: Information-based evaluation criterion for classifier's performance. Machine Learning 6 (1991) 67-80'" ;
+                                    skos:prefLabel "kononenko branko information score" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/kononenko_branko_relative_information_score
+:kononenko_branko_relative_information_score rdf:type owl:NamedIndividual ,
+                                                      skos:Concept ;
+                                             skos:broader :Kononenko_Branko_Score ;
+                                             skos:definition "The Kononenko and Bratko Information score, divided by the prior entropy of the class distribution. See: Kononenko, I., Bratko, I.: Information-based evaluation criterion for classifier's performance. Machine Learning 6 (1991) 67-80'" ;
+                                             skos:prefLabel "kononenko branko relative information score" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/matthews_correlation_coefficient
+:matthews_correlation_coefficient rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  skos:broader :correlation_coefficient ;
+                                  skos:definition "The Matthews correlation coefficient takes into account true and false positives and negatives and is generally regarded as a balanced measure which can be used even if the classes are of very different sizes. The MCC is in essence a correlation coefficient between the observed and predicted binary classifications; it returns a value between ?1 and +1. A coefficient of +1 represents a perfect prediction, 0 no better than random prediction and ?1 indicates total disagreement between prediction and observation. The statistic is also known as the phi coefficient. MCC is related to the chi-square statistic for a 2×2 contingency table. The MCC can be calculated directly from the confusion matrix using the formula: <math> text{MCC} = frac{ TP times TN - FP times FN } { sqrt{ (TP + FP) ( TP + FN ) ( TN + FP ) ( TN + FN ) } } </math> See: http://en.wikipedia.org/wiki/Matthews_correlation_coefficient" ;
+                                  skos:prefLabel "matthews correlation coefficient" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_absolute_error
+:mean_absolute_error rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :error ;
+                     skos:definition "The mean absolute error (MAE) measures how close the model's predictions are to the actual target values. It is the sum of the absolute value of the difference of each instance prediction and the actual value. For classification, the 0/1-error is used. <math> mathrm{MAE} = frac{1}{n} sum_{i=1}^n left| f_i-y_i right| = frac{1}{n} sum_{i=1}^n left| e_i right|.</math> See: http://en.wikipedia.org/wiki/Mean_absolute_error" ;
+                     skos:prefLabel "mean absolute error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_class_complexity
+:mean_class_complexity rdf:type owl:NamedIndividual ,
+                                skos:Concept ;
+                       skos:broader :Complexity ;
+                       skos:definition "The entropy of the class distribution generated by the model (see class_complexity), divided by the number of instances in the input data." ;
+                       skos:prefLabel "mean class complexity" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_class_complexity_gain
+:mean_class_complexity_gain rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            skos:broader :Complexity ;
+                            skos:definition "The entropy gain of the class distribution  by the model over the prior distribution (see class_complexity_gain), divided by the number of instances in the input data." ;
+                            skos:prefLabel "mean class complexity gain" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_f_measure
+:mean_f_measure rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:broader :f_measure ;
+                skos:definition "Unweighted(!) macro-average F-Measure. In macro-averaging, F-measure is computed locally over each category ?rst and then the average over all categories is taken." ;
+                skos:prefLabel "mean f measure" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_kononenko_branko_information_score
+:mean_kononenko_branko_information_score rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ;
+                                         skos:broader :Kononenko_Branko_Score ;
+                                         skos:definition "Kononenko and Bratko Information score, see kononenko_bratko_information_score, divided by the number of instances in the input data. See: Kononenko, I., Bratko, I.: Information-based evaluation criterion for classi er's performance. Machine Learning 6 (1991) 67-80', 'See WEKA's Evaluation class '" ;
+                                         skos:prefLabel "mean kononenko branko information score" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_precision
+:mean_precision rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:broader :precision ;
+                skos:definition "Unweighted(!) macro-average Precision. In macro-averaging, Precision is computed locally over each category ?rst and then the average over all categories is taken." ;
+                skos:prefLabel "mean precision" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_prior_absolute_error
+:mean_prior_absolute_error rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :error ;
+                           skos:definition "The mean prior absolute error (MPAE) is the mean absolute error (see mean_absolute_error) of the prior (e.g., default class prediction). See: http://en.wikipedia.org/wiki/Mean_absolute_error" ;
+                           skos:prefLabel "mean prior absolute error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_prior_class_complexity
+:mean_prior_class_complexity rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:broader :Complexity ;
+                             skos:definition "The entropy of the class distribution of the prior (see prior_class_complexity), divided by the number of instances in the input data." ;
+                             skos:prefLabel "mean prior class complexity" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_recall
+:mean_recall rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:broader :recall ;
+             skos:definition "Unweighted(!) macro-average Recall. In macro-averaging, Recall is computed locally over each category ?rst and then the average over all categories is taken." ;
+             skos:prefLabel "mean recall" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_unweighted_f_measure
+:mean_unweighted_f_measure rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :f_measure ;
+                           skos:prefLabel "mean unweighted f measure" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_unweighted_precision
+:mean_unweighted_precision rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           skos:broader :precision ;
+                           skos:prefLabel "mean unweighted precision" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_unweighted_recall
+:mean_unweighted_recall rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :recall ;
+                        skos:prefLabel "mean unweighted recall" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_weighted_area_under_ROC_curve
+:mean_weighted_area_under_ROC_curve rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    skos:broader :Area_Under_Curve_Evaluation_Metric ;
+                                    skos:definition "The macro weighted (by class size) average area_under_ROC_curve (AUROC). In macro-averaging, AUROC is computed locally over each category ?rst and then the average over all categories is taken, weighted by the number of instances of that class. Conversely, in micro-averaging, AUROC is computed globally over all category decisions." ;
+                                    skos:prefLabel "mean weighted area under ROC curve" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_weighted_f_measure
+:mean_weighted_f_measure rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :f_measure ;
+                         skos:definition "The macro weighted (by class size) average F-Measure. In macro-averaging, F-measure is computed locally over each category ?rst and then the average over all categories is taken, weighted by the number of instances of that class. Conversely, in micro-averaging, F-measure is computed globally over all category decisions." ;
+                         skos:prefLabel "mean weighted f measure" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_weighted_precision
+:mean_weighted_precision rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :precision ;
+                         skos:definition "The macro weighted (by class size) average Precision. In macro-averaging, Precision is computed locally over each category ?rst and then the average over all categories is taken, weighted by the number of instances of that class. Conversely, in micro-averaging, Precision is computed globally over all category decisions." ;
+                         skos:prefLabel "mean weighted precision" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/mean_weighted_recall
+:mean_weighted_recall rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      skos:broader :recall ;
+                      skos:prefLabel "mean weighted recall" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/os_information
+:os_information rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                skos:definition "Default information about OS, JVM, installations, etc." ;
+                skos:prefLabel "os information" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/pearson_correlation_coefficient
+:pearson_correlation_coefficient rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :correlation_coefficient ;
+                                 skos:prefLabel "pearson correlation coefficient" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/positives
+:positives rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:definition "Precision is defined as the number of true positive (TP) predictions, divided by the sum of the number of true positives and false positives (TP+FP): <math> text{Precision}= frac{tp}{tp+fp} , </math> It is also referred to as the Positive predictive value (PPV). See: http://en.wikipedia.org/wiki/Precision_and_recall Precision is defined only for a specific class value, and should thus be labeled with the class value for which is was computed. Use the mean_weighted_precision for the weighted average over all class values." ,
+                           "The amount of positives in the subgroup" ;
+           skos:prefLabel "positives" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/precision
+:precision rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:narrower :mean_precision ,
+                         :mean_unweighted_precision ,
+                         :mean_weighted_precision ;
+           skos:prefLabel "precision" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/prediction_confusion_matrix
+:prediction_confusion_matrix rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:prefLabel "prediction confusion matrix" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/prior_class_complexity
+:prior_class_complexity rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Complexity ;
+                        skos:definition "Entropy, in bits, of the prior class distribution. Calculated by taking the sum of -log2(priorProb) over all instances, where priorProb is the prior probability of the actual class for that instance. If instances are weighted, the weighted sum is taken." ;
+                        skos:prefLabel "prior class complexity" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/prior_entropy
+:prior_entropy rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:broader :class_distribution_entropy ;
+               skos:definition "Entropy, in bits, of the prior class distribution. Calculated by taking the sum of -log2(priorProb) over all instances, where priorProb is the prior probability of the actual class for that instance. If instances are weighted, the weighted sum is taken." ;
+               skos:prefLabel "prior entropy" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/probability
+:probability rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             skos:definition "The probability of a subgroup." ;
+             skos:prefLabel "probability" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/quality
+:quality rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         skos:definition "The quality of the founded subgroup" ;
+         skos:prefLabel "quality" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/ram_hours
+:ram_hours rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:broader :Execution ;
+           skos:definition "Every GB of RAM deployed for 1 hour equals one RAM-Hour." ;
+           skos:prefLabel "ram hours" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/recall
+:recall rdf:type owl:NamedIndividual ,
+                 skos:Concept ;
+        skos:definition "Recall is defined as the number of true positive (TP) predictions, divided by the sum of the number of true positives and false negatives (TP+FN): <math> text{Recall}= frac{tp}{tp+fn} , </math> It is also referred to as the True Positive Rate (TPR) or Sensitivity. See: http://en.wikipedia.org/wiki/Precision_and_recall Recall is defined only for a specific class value, and should thus be labeled with the class value for which is was computed. Use the mean_weighted_recall for the weighted average over all class values." ;
+        skos:narrower :mean_recall ,
+                      :mean_unweighted_recall ,
+                      :mean_weighted_recall ,
+                      :unweighted_recall ;
+        skos:prefLabel "recall" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/relative_absolute_error
+:relative_absolute_error rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :error ;
+                         skos:definition "The Relative Absolute Error (RAE) is the mean absolute error (MAE) divided by the mean prior absolute error (MPAE)." ;
+                         skos:prefLabel "relative absolute error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/root_mean_prior_squared_error
+:root_mean_prior_squared_error rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               skos:broader :error ;
+                               skos:definition "The Root Mean Prior Squared Error (RMPSE) is the Root Mean Squared Error (RMSE) of the prior (e.g., the default class prediction)." ;
+                               skos:prefLabel "root mean prior squared error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/root_mean_squared_error
+:root_mean_squared_error rdf:type owl:NamedIndividual ,
+                                  skos:Concept ;
+                         skos:broader :error ;
+                         skos:definition "The Root Mean Squared Error (RMSE) measures how close the model's predictions are to the actual target values. It is the square root of the Mean Squared Error (MSE), the sum of the squared differences between the predicted value and the actual value. For classification, the 0/1-error is used. :<math> operatorname{MSE}( overline{X})= operatorname{E}(( overline{X}- mu)^2)= left( frac{ sigma}{ sqrt{n}} right)^2= frac{ sigma^2}{n}</math> See: http://en.wikipedia.org/wiki/Mean_squared_error" ;
+                         skos:prefLabel "root mean squared error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/root_relative_squared_error
+:root_relative_squared_error rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:broader :error ;
+                             skos:definition "The Root Relative Squared Error (RRSE) is the Root Mean Squared Error (RMSE) divided by the Root Mean Prior Squared Error (RMPSE). See root_mean_squared_error and root_mean_prior_squared_error." ;
+                             skos:prefLabel "root relative squared error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/run_cpu_time
+:run_cpu_time rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              skos:broader :Execution ;
+              skos:definition "Runtime in seconds of the entire run. In the case of cross-validation runs, this will include all iterations." ;
+              skos:prefLabel "run cpu time" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/run_memory
+:run_memory rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:broader :Execution ;
+            skos:definition "Amount of memory, in bytes, used during  the entire run." ;
+            skos:prefLabel "run memory" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/run_virtual_memory
+:run_virtual_memory rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:broader :Execution ;
+                    skos:definition "Amount of virtual memory, in bytes, used during  the entire run." ;
+                    skos:prefLabel "run virtual memory" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/schimark_benchmark
+:schimark_benchmark rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    skos:definition "A benchmark tool which measures (single core) CPU performance on the JVM." ;
+                    skos:prefLabel "schimark benchmark" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/single_point_area_under_ROC_curve
+:single_point_area_under_ROC_curve rdf:type owl:NamedIndividual ,
+                                            skos:Concept ;
+                                   skos:broader :Area_Under_Curve_Evaluation_Metric ;
+                                   skos:prefLabel "single point area under ROC curve" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/total_cost
+:total_cost rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:broader :cost ;
+            skos:prefLabel "total cost" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/unclassified_instance_count
+:unclassified_instance_count rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             skos:definition "Number of instances that were not classified by the model." ;
+                             skos:prefLabel "unclassified instance count" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/unweighted_recall
+:unweighted_recall rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   skos:broader :recall ;
+                   skos:definition "The macro unweighted (ignoring class size) average Recall. In macro-averaging, Recall is computed locally over each category ?rst and then the average over all categories is taken, weighted by the number of instances of that class. Conversely, in micro-averaging, Recall is computed globally over all category decisions." ;
+                   skos:prefLabel "unweighted recall" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/usercpu_time_millis
+:usercpu_time_millis rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     skos:broader :Execution ;
+                     skos:definition "The time in milliseconds to build and test a single model on all data." ;
+                     skos:prefLabel "usercpu time millis" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/usercpu_time_millis_training
+:usercpu_time_millis_training rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              skos:broader :Execution ;
+                              skos:definition "The time in milliseconds to build a single model on all data." ;
+                              skos:prefLabel "usercpu time millis training" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/variance
+:variance rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          skos:narrower :webb_variance ;
+          skos:prefLabel "variance" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/wall_clock_time_millis
+:wall_clock_time_millis rdf:type owl:NamedIndividual ,
+                                 skos:Concept ;
+                        skos:broader :Execution ;
+                        skos:definition "The number of milliseconds from the start of training until the completion of testing. Thus, involves both training and testing. Does not take into account the number of cores." ;
+                        skos:prefLabel "wall clock time millis" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/wall_clock_time_millis_testing
+:wall_clock_time_millis_testing rdf:type owl:NamedIndividual ,
+                                         skos:Concept ;
+                                skos:broader :Execution ;
+                                skos:definition "The number of milliseconds from the start of testing until the completion of testing. Does not take into account the number of cores." ;
+                                skos:prefLabel "wall clock time millis testing" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/wall_clock_time_millis_training
+:wall_clock_time_millis_training rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 skos:broader :Execution ;
+                                 skos:definition "The number of milliseconds from the start of training until the completion of training. Does not take into account the number of cores." ;
+                                 skos:prefLabel "wall clock time millis training" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/webb_bias
+:webb_bias rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           skos:broader :bias ;
+           skos:definition "Bias component (squared) of the bias-variance decomposition as defined by Webb in: Geoffrey I. Webb (2000), MultiBoosting: A Technique for Combining Boosting and Wagging, Machine Learning, 40(2), pages 159-196. This quantity measures how closely the learning algorithms average guess over all possible training sets of the given training set size matches the target. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+           skos:prefLabel "webb bias" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/webb_error
+:webb_error rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            skos:broader :error ;
+            skos:definition "Intrinsic error component (squared) of the bias-variance decomposition as defined by Webb in: Geoffrey I. Webb (2000), MultiBoosting: A Technique for Combining Boosting and Wagging, Machine Learning, 40(2), pages 159-196. This quantity is a lower bound on the expected cost of any learning algorithm. It is the expected cost of the Bayes optimal classifier. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+            skos:prefLabel "webb error" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/webb_variance
+:webb_variance rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               skos:broader :variance ;
+               skos:definition "Variance component of the bias-variance decomposition as defined by Webb in: Geoffrey I. Webb (2000), MultiBoosting: A Technique for Combining Boosting and Wagging, Machine Learning, 40(2), pages 159-196. This quantity measures how much the learning algorithms guess 'bounces around' for the different training sets of the given size. Estimated using the classifier using the sub-sampled cross-validation procedure as specified in: Geoffrey I. Webb & Paul Conilione (2002), Estimating bias and variance from data , School of Computer Science and Software Engineering, Monash University, Australia" ;
+               skos:prefLabel "webb variance" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/confusion_matrix
+<http://w3id.org/mlso/vocab/evaluation_measure/confusion_matrix> rdf:type owl:NamedIndividual ,
+                                                                              skos:Concept ;
+                                                                     skos:definition "The confusion matrix, or contingency table, is a table that summarizes the number of instances that were predicted to belong to a certain class, versus their actual class. It is an NxN matrix where N is the number of different class values, with the predicted classes in the columns and the actual classes in the rows. In the case of 2 class values (positive and negative), the fields in the matrix are respectively, from left-to-right, top-to-bottom, the number of true positives (TP), false negatives (FN), false positives (FP) and true negatives (TN). The number of correctly classified instances is the sum of diagonals in the matrix; all others are incorrectly classified (e.g. class ”a” gets misclassified as ”b”). See: http://en.wikipedia.org/wiki/Confusion_matrix. The values of the confusion matrix are each labeled with the actual and predicted class, e.g. 'actual=pos, predicted=neg'." ;
+                                                                     skos:prefLabel "confusion matrix" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/number_of_instances
+<http://w3id.org/mlso/vocab/evaluation_measure/number_of_instances> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:definition "The number of instances used for this evaluation." ;
+                                                                        skos:prefLabel "number of instances" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/user_cpu_time_millis_testing
+<http://w3id.org/mlso/vocab/evaluation_measure/user_cpu_time_millis_testing> rdf:type owl:NamedIndividual ,
+                                                                                          skos:Concept ;
+                                                                                 skos:definition "The time in milliseconds to test a single model on all data." ;
+                                                                                 skos:prefLabel "user cpu time millis testing" .
+
+
+###  http://w3id.org/mlso/vocab/evaluation_measure/weighted_recall
+<http://w3id.org/mlso/vocab/evaluation_measure/weighted_recall> rdf:type owl:NamedIndividual ,
+                                                                             skos:Concept ;
+                                                                    skos:definition "The macro weighted (by class size) average Recall. In macro-averaging, Recall is computed locally over each category ?rst and then the average over all categories is taken, weighted by the number of instances of that class. Conversely, in micro-averaging, Recall is computed globally over all category decisions." ;
+                                                                    skos:prefLabel "weighted recall" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
