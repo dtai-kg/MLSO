@@ -1,0 +1,2191 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "https://w3id.org/okn/o/sd", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://www.w3.org/ns/dcat", "http://edamontology.org", "http://www.w3.org/ns/mls", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://purl.org/dc/terms", "http://xmlns.com/foaf/0.1", "http://w3id.org/mlso", "http://www.w3.org/ns/adms", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "The Machine Learning Sailor Ontology"
+    },
+    "iri" : "http://w3id.org/mlso",
+    "version" : "1.0.0",
+    "author" : [ "Ioannis Dasoulas", "Anastasia Dimou" ],
+    "comments" : {
+      "en" : "An ontology for describing machine learning datasets, tasks, pipelines, experiments, software and publications. The ontology extends ML-Schema, DCAT, FaBiO and SDO."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ioannis Dasoulas",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Anastasia Dimou",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "December 7th, 2023",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "An ontology for describing machine learning datasets, tasks, pipelines, experiments, software and publications. The ontology extends ML-Schema, DCAT, FaBiO and SDO.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Machine Learning Sailor Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "47",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/mls#Task",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Task",
+      "undefined" : "Task"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "undefined" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://w3id.org/mlso/DataModality",
+    "baseIri" : "http://w3id.org/mlso",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Data modality refers to the different types or forms of data that exist, and it is often used to describe the way information is represented or encoded in a dataset."
+    },
+    "label" : {
+      "IRI-based" : "DataModality",
+      "undefined" : "Data Modality"
+    },
+    "comment" : {
+      "undefined" : "Data modality refers to the different types or forms of data that exist, and it is often used to describe the way information is represented or encoded in a dataset."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Catalog",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Catalog",
+      "undefined" : "Catalog"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#FeatureCharacteristic",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Feature Characteristic is a distinguishing quality or property that distinguish one dataset feature from another."
+    },
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FeatureCharacteristic",
+      "undefined" : "Feature Characteristic"
+    },
+    "comment" : {
+      "undefined" : "Feature Characteristic is a distinguishing quality or property that distinguish one dataset feature from another."
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "27",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "47",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Algorithm",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Algorithm",
+      "undefined" : "Algorithm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Software",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sd#Software",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Software",
+      "undefined" : "Software"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Distribution",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Distribution",
+      "undefined" : "Distribution"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#EvaluationProcedure",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EvaluationProcedure",
+      "undefined" : "Evaluation Procedure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#InformationEntity",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationEntity"
+    },
+    "subClasses" : [ "25", "23", "16", "14", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Location",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "Location"
+    },
+    "attributes" : [ "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#DataService",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataService",
+      "undefined" : "Data Service"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Implementation",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Implementation",
+      "undefined" : "Implementation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#DataCharacteristic",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataCharacteristic",
+      "undefined" : "Data Characteristic"
+    },
+    "subClasses" : [ "73" ],
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Model",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Model",
+      "undefined" : "Model"
+    },
+    "attributes" : [ "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Run",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Run",
+      "undefined" : "Run"
+    },
+    "attributes" : [ "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Dataset",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/dcat#Dataset",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Dataset",
+      "undefined" : "Dataset"
+    },
+    "subClasses" : [ "38" ],
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#EvaluationMeasure",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EvaluationMeasure",
+      "undefined" : "Evaluation Measure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://w3id.org/mlso/HyperParameterCharacteristic",
+    "baseIri" : "http://w3id.org/mlso",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "HyperParameter Characteristic is a distinguishing quality or property that distinguish one hyper-parameter from another."
+    },
+    "label" : {
+      "IRI-based" : "HyperParameterCharacteristic",
+      "undefined" : "HyperParameter Characteristic"
+    },
+    "comment" : {
+      "undefined" : "HyperParameter Characteristic is a distinguishing quality or property that distinguish one hyper-parameter from another."
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://edamontology.org/format_1950",
+    "baseIri" : "http://edamontology.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://edamontology.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "format_1950",
+      "undefined" : "Format"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Feature",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Feature",
+      "undefined" : "Feature"
+    },
+    "attributes" : [ "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://w3id.org/mlso/ScientificWork",
+    "baseIri" : "http://w3id.org/mlso",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A formal and structured document that presents the results, methodology, analysis, and conclusions of a scientific investigation or study."
+    },
+    "label" : {
+      "IRI-based" : "ScientificWork",
+      "undefined" : "Scientific Work"
+    },
+    "comment" : {
+      "undefined" : "A formal and structured document that presents the results, methodology, analysis, and conclusions of a scientific investigation or study."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#SourceCode",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sd",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SourceCode",
+      "undefined" : "Source Code"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#Data",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Data",
+      "undefined" : "Data"
+    },
+    "subClasses" : [ "58" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "110",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#realizes",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "realizes"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/dc/terms/licence",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "licence",
+      "undefined" : "licence"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasDataLoaderLocation",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "12",
+    "description" : {
+      "undefined" : "A relation between a data entity and an online location that its data loader can be found."
+    },
+    "label" : {
+      "IRI-based" : "hasDataLoaderLocation",
+      "undefined" : "has data loader location"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "A relation between a data entity and an online location that its data loader can be found."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "10"
+  }, {
+    "range" : "2",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "2",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#achieves",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "achieves"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://purl.org/spar/fabio/abstract",
+    "baseIri" : "http://purl.org/spar/fabio",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/fabio",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "abstract"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "18"
+  }, {
+    "range" : "2",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "2",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasTaskType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between a task and the category of tasks that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasTaskType",
+      "undefined" : "has task type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "27",
+    "comment" : {
+      "undefined" : "A relation between a task and the category of tasks that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#atLocation",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "atLocation",
+      "undefined" : "at location"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://schema.org/codeRepository",
+    "baseIri" : "http://schema.org",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "codeRepository",
+      "undefined" : "code repository"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasEvaluationMeasureType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an evaluation measure and the category of evaluation measures that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasEvaluationMeasureType",
+      "undefined" : "has evaluation measure type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "37",
+    "comment" : {
+      "undefined" : "A relation between an evaluation measure and the category of evaluation measures that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasRelatedImplementation",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "41",
+    "description" : {
+      "undefined" : "A relation between an entity and a machine learning implementation that leverages, references or is related to this entity in some way."
+    },
+    "label" : {
+      "IRI-based" : "hasRelatedImplementation",
+      "undefined" : "has related implementation"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "A relation between an entity and a machine learning implementation that leverages, references or is related to this entity in some way."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#distribution",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "distribution",
+      "undefined" : "distribution"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://purl.org/dc/terms/language",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "language",
+      "undefined" : "language"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasLearningMethodType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an algorithm learning method and the category of algorithm learning methods that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasLearningMethodType",
+      "undefined" : "has learning method type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "A relation between an algorithm learning method and the category of algorithm learning methods that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#specifiedBy",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "specifiedBy"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://w3id.org/mlso/isVariantOf",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isVariantOf",
+      "undefined" : "is variant of"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#hasOutput",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOutput"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#accessService",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "accessService",
+      "undefined" : "access service"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasPredictionsLocation",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "60",
+    "description" : {
+      "undefined" : "A relation between a machine learning experiment execution and the URI where its predictions can be found."
+    },
+    "label" : {
+      "IRI-based" : "hasPredictionsLocation",
+      "undefined" : "has predictions location"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "A relation between a machine learning experiment execution and the URI where its predictions can be found."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an instance and a vocabulary concept that can describe it."
+    },
+    "label" : {
+      "IRI-based" : "hasType",
+      "undefined" : "has type"
+    },
+    "domain" : "27",
+    "subproperty" : [ "61", "62", "36", "26", "51", "63" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasFormat",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "1",
+    "description" : {
+      "undefined" : "A relation between a data file and its format."
+    },
+    "label" : {
+      "IRI-based" : "hasFormat",
+      "undefined" : "has format"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "A relation between a data file and its format."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasDataCharacteristicType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between a data characteristic and the category of data characteristics that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasDataCharacteristicType",
+      "undefined" : "has data characteristic type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "A relation between a data characteristic and the category of data characteristics that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://purl.org/dc/terms/contributor",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contributor"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#landingPage",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "landingPage",
+      "undefined" : "landing page"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#hasInput",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#executes",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "executes"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#definedOn",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "definedOn"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://purl.org/dc/terms/hasVersion",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasVersion",
+      "undefined" : "hasVersion"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "75"
+  }, {
+    "range" : "39",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "title"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "78"
+  }, {
+    "range" : "66",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "79"
+  }, {
+    "range" : "11",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://purl.org/dc/terms/issued",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "82",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "issued",
+      "undefined" : "issued"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasRelatedSoftware",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "55",
+    "description" : {
+      "undefined" : "A relation between an entity and a software implementation that leverages, references or is related to this entity in some way."
+    },
+    "label" : {
+      "IRI-based" : "hasRelatedSoftware",
+      "undefined" : "has related software"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "A relation between an entity and a software implementation that leverages, references or is related to this entity in some way."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasMD5",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "85",
+    "description" : {
+      "undefined" : "A relation between a dataset distribution and its md5 hash."
+    },
+    "label" : {
+      "IRI-based" : "hasMD5",
+      "undefined" : "has MD5"
+    },
+    "domain" : "58",
+    "comment" : {
+      "undefined" : "A relation between a dataset distribution and its md5 hash."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasDefaultTargetFeature",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "87",
+    "description" : {
+      "undefined" : "A relation between a dataset and a feature that is the default target feature."
+    },
+    "label" : {
+      "IRI-based" : "hasDefaultTargetFeature",
+      "undefined" : "has default target feature"
+    },
+    "domain" : "58",
+    "comment" : {
+      "undefined" : "A relation between a dataset and a feature that is the default target feature."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://purl.org/dc/terms/bibliographicCitation",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "bibliographicCitation",
+      "undefined" : "bibliographic citation"
+    },
+    "domain" : "23",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasNumberOfReferences",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "90",
+    "description" : {
+      "undefined" : "A relation between an entity and the number of times it is referenced in scientific publications."
+    },
+    "label" : {
+      "IRI-based" : "hasNumberOfReferences",
+      "undefined" : "has number of references"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "A relation between an entity and the number of times it is referenced in scientific publications."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#hasHyperParameter",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasHyperParameter"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasIdFeature",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "87",
+    "description" : {
+      "undefined" : "A relation between a dataset and a feature that is used for identifying the different instances of the dataset."
+    },
+    "label" : {
+      "IRI-based" : "hasIdFeature",
+      "undefined" : "has id feature"
+    },
+    "domain" : "58",
+    "comment" : {
+      "undefined" : "A relation between a dataset and a feature that is used for identifying the different instances of the dataset."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#softwareRequirements",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sd#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "softwareRequirements",
+      "undefined" : "software requirements"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://w3id.org/mlso/scientificReferenceOf",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "scientificReferenceOf",
+      "undefined" : "scientific reference of"
+    },
+    "domain" : "23",
+    "attributes" : [ "external", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "44",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "undefined" : "identifier"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "undefined" : "description"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#hasPart",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#implements",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implements"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://purl.org/spar/fabio/hasArXivId",
+    "baseIri" : "http://purl.org/spar/fabio",
+    "range" : "31",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/fabio/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasArXivId"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#servesDataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "servesDataset",
+      "undefined" : "serves dataset"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasCacheFormat",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "hasCacheFormat",
+      "undefined" : "has cache format"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasModality",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "14",
+    "description" : {
+      "undefined" : "A relation between a data entity and its data modality."
+    },
+    "label" : {
+      "IRI-based" : "hasModality",
+      "undefined" : "has modality"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "A relation between a data entity and its data modality."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://purl.org/dc/terms/publisher",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "publisher",
+      "undefined" : "publisher"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasEvaluationProcedureType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an evaluation procedure and the category of evaluation procedures that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasEvaluationProcedureType",
+      "undefined" : "has evaluation procedure type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "64",
+    "comment" : {
+      "undefined" : "A relation between an evaluation procedure and the category of evaluation procedures that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#keyword",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "keyword",
+      "undefined" : "keyword"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#downloadURL",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "33",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "downloadURL",
+      "undefined" : "download URL"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasAlgorithmType",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an algorithm the category of algorithms that it belongs to."
+    },
+    "label" : {
+      "IRI-based" : "hasAlgorithmType",
+      "undefined" : "has algorithm type"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "A relation between an algorithm the category of algorithms that it belongs to."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/ns/adms#status",
+    "baseIri" : "http://www.w3.org/ns/adms",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/adms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "status",
+      "undefined" : "status"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#defines",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "defines"
+    },
+    "domain" : "11",
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.w3.org/ns/mls#hasQuality",
+    "baseIri" : "http://www.w3.org/ns/mls",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/mls",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasQuality"
+    },
+    "domain" : "87",
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://w3id.org/mlso/ignoresFeature",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "87",
+    "description" : {
+      "undefined" : "A relation between a dataset and a feature that is to be ignored when processing the dataset."
+    },
+    "label" : {
+      "IRI-based" : "ignoresFeature",
+      "undefined" : "ignores feature"
+    },
+    "domain" : "58",
+    "comment" : {
+      "undefined" : "A relation between a dataset and a feature that is to be ignored when processing the dataset."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://w3id.org/mlso/trainedOn",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "11",
+    "description" : {
+      "undefined" : "A relation between a machine learning model and the data that it was trained on."
+    },
+    "label" : {
+      "IRI-based" : "trainedOn",
+      "undefined" : "trained on"
+    },
+    "domain" : "74",
+    "comment" : {
+      "undefined" : "A relation between a machine learning model and the data that it was trained on."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasScientificReference",
+    "inverse" : "94",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "23",
+    "description" : {
+      "undefined" : "A relation between an entity and a scientific work that references it."
+    },
+    "label" : {
+      "IRI-based" : "hasScientificReference",
+      "undefined" : "has scientific reference"
+    },
+    "domain" : "47",
+    "comment" : {
+      "undefined" : "A relation between an entity and a scientific work that references it."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasTrainTestSplitIndices",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "105",
+    "description" : {
+      "undefined" : "A relation between a machine learning task and the dataset split it uses on the dataset that it is defined on."
+    },
+    "label" : {
+      "IRI-based" : "hasTrainTestSplitIndices",
+      "undefined" : "has train test split indices"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "A relation between a machine learning task and the dataset split it uses on the dataset that it is defined on."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://w3id.org/mlso/hasVariant",
+    "inverse" : "54",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "11",
+    "description" : {
+      "undefined" : "A relation between two data entities that share significant similarities but differ in certain characteristics or aspects."
+    },
+    "label" : {
+      "IRI-based" : "hasVariant",
+      "undefined" : "has variant"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "A relation between two data entities that share significant similarities but differ in certain characteristics or aspects."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://w3id.org/mlso/relatedToField",
+    "baseIri" : "http://w3id.org/mlso",
+    "range" : "4",
+    "description" : {
+      "undefined" : "A relation between an instance and the machine learning field that it is associated with."
+    },
+    "label" : {
+      "IRI-based" : "relatedToField",
+      "undefined" : "related to field"
+    },
+    "domain" : "27",
+    "comment" : {
+      "undefined" : "A relation between an instance and the machine learning field that it is associated with."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://purl.org/dc/terms/creator",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creator"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "dataset",
+      "undefined" : "dataset"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "118"
+  } ]
+}
