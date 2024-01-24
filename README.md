@@ -23,8 +23,19 @@ Core Entities and Relationships of MLSO:
 <br><br>
 
 
-Core Entities and Relationships of MLSO:
-![Error loading the image!](documentation/Namespaces.jpg)
+MLSO and MLST Namespaces:
+
+| Module | Description | Namespace |
+|:---------:|:---------:|:---------:|
+| MLSO | Machine Learning Sailor Ontology | http://w3id.org/mlso |
+| MLSO-DC | Dataset Characteristic Taxonomy | http://w3id.org/mlso/vocab/dataset_characteristic |
+| MLSO-FC | Feature Characteristic Taxonomy | http://w3id.org/mlso/vocab/feature_characteristic |
+| MLSO-EM | Evaluation Measure Taxonomy | http://w3id.org/mlso/vocab/evaluation_measure |
+| MLSO-EP | Estimation Procedure Taxonomy | http://w3id.org/mlso/vocab/estimation_procedure |
+| MLSO-LM | Learning Method Taxonomy | http://w3id.org/mlso/vocab/learning_method |
+| MLSO-ALGO | Algorithm Taxonomy | http://w3id.org/mlso/vocab/ml_algorithm |
+| MLSO-F | Machine Learning Field Taxonomy | http://w3id.org/mlso/vocab/ml_field |
+| MLSO-TT | Task Type Taxonomy | http://w3id.org/mlso/vocab/ml_task_type |
 
 <br><br>
 
