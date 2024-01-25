@@ -20,7 +20,7 @@
 @base <http://w3id.org/mlso> .
 
 <http://w3id.org/mlso> rdf:type owl:Ontology ;
-                        owl:imports <https://raw.githubusercontent.com/ML-Schema/core/master/MLSchema.ttl>; ##ML-Schema:http://www.w3.org/ns/mls#
+                        owl:imports <https://raw.githubusercontent.com/ML-Schema/core/master/MLSchema.ttl> ;
                         dcterms:abstract "An ontology for describing machine learning datasets, tasks, pipelines, experiments, software and publications. The ontology extends ML-Schema, DCAT, FaBiO and SDO."@en ;
                         dcterms:created "December 7th, 2023"@en ;
                         dcterms:creator "Anastasia Dimou"@en ,
@@ -409,12 +409,6 @@ dcterms:bibliographicCitation rdf:type owl:DatatypeProperty .
 dcterms:description rdf:type owl:DatatypeProperty .
 
 
-###  http://purl.org/dc/terms/hasVersion
-dcterms:hasVersion rdf:type owl:DatatypeProperty ;
-                   rdfs:isDefinedBy "http://purl.org/dc/terms" ;
-                   rdfs:label "hasVersion" .
-
-
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:isDefinedBy "http://purl.org/dc/terms" ;
@@ -461,6 +455,8 @@ schema:codeRepository rdf:type owl:DatatypeProperty ;
 ###  http://w3id.org/mlso/hasCacheFormat
 mlso:hasCacheFormat rdf:type owl:DatatypeProperty ;
                     rdfs:range rdfs:Literal ;
+                    dcterms:description "A relation between a data entity and its cache format." ;
+                    rdfs:comment "A relation between a data entity and its cache format." ;
                     rdfs:label "has cache format" .
 
 
@@ -492,9 +488,10 @@ mlso:hasNumberOfReferences rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/mlso/hasPredictionsLocation
 mlso:hasPredictionsLocation rdf:type owl:DatatypeProperty ;
+                            rdfs:domain mls:Run ;
                             rdfs:range xsd:anyURI ;
-                            dcterms:description "A relation between a machine learning experiment execution and the URI where its predictions can be found." ;
-                            rdfs:comment "A relation between a machine learning experiment execution and the URI where its predictions can be found." ;
+                            dcterms:description "A relation between a run and the URI where its predictions can be found." ;
+                            rdfs:comment "A relation between a run and the URI where its predictions can be found." ;
                             rdfs:label "has predictions location" .
 
 
@@ -627,7 +624,8 @@ mls:DatasetCharacteristic rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/mls#EvaluationMeasure
-mls:EvaluationMeasure rdfs:isDefinedBy <http://www.w3.org/ns/mls> ;
+mls:EvaluationMeasure rdf:type owl:Class ;
+                      rdfs:isDefinedBy <http://www.w3.org/ns/mls> ;
                       rdfs:label "Evaluation Measure" .
 
 
@@ -732,7 +730,8 @@ mls:Run rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/mls#Software
-mls:Software rdfs:isDefinedBy <http://www.w3.org/ns/mls> ;
+mls:Software rdf:type owl:Class ;
+             rdfs:isDefinedBy <http://www.w3.org/ns/mls> ;
              rdfs:label "Software" ;
              owl:sameAs "https://w3id.org/okn/o/sd#Software" .
 
