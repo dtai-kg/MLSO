@@ -44,5 +44,18 @@ MLSO and MLST Namespaces:
 The ontology is published using GitHub pages. 
 Content negotiation configuration on w3id.org is available [here](https://github.com/perma-id/w3id.org/tree/master/mlso).
 
+<br><br>
+
+# Cite 
+
+Thank you for reading! To cite our resource:
+
+    @InProceedings{dasoulas2024mlsea,
+        author    = {Dasoulas, Ioannis and Yang, Duo and Dimou, Anastasia},
+        booktitle = {The Semantic Web},
+        title     = {{MLSea: A Semantic Layer for Discoverable Machine Learning}},
+        year      = {2024}
+    }
+
 
 

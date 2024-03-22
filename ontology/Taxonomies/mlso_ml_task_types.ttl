@@ -10283,7 +10283,8 @@ skos:Collection a owl:Class .
         :Real-timeInstanceSegmentation,
         :Semi-SupervisedInstanceSegmentation,
         :UnsupervisedInstanceSegmentation,
-        :Weakly-supervisedinstancesegmentation .
+        :Weakly-supervisedinstancesegmentation;
+	skos:prefLabel "Action Recognition" .
 
 :Few-ShotLearning a owl:NamedIndividual,
         skos:Concept ;
